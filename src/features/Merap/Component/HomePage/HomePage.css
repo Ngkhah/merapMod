@@ -1,0 +1,120 @@
+.dashboard--item {
+    width: 325px;
+    height: 325px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    transition: all 0.5s;
+
+}
+
+.dashboard--menu {
+    margin-top: 5rem;
+}
+
+.dashboard--item:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all 0.2s;
+}
+
+.dashboard--item .title--App h3 {
+    overflow: hidden;
+    position: relative;
+
+}
+
+.dashboard--item .title--App h3 {
+    background-image: linear-gradient(to right,
+            #01a79d,
+            #01a79d 50%,
+            #000 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.dashboard--item:before .title--App h3 {
+    content: '';
+    background: #01a79d;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.dashboard--item:hover .title--App h3 {
+    background-position: 0;
+}
+
+.dashboard--item:hover::before .title--App h3 {
+    width: 100%;
+}
+
+@media only screen and (min-width: 1920px) {
+    .homePage--Responsive {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1919px) {
+    .dashboard--item {
+        width: 280px;
+        height: 280px;
+    }
+    .dashboard--item .title--App {
+        width: 100px;
+        height: 100px;
+    }
+    .dashboard--item .title--App img{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1279px) {
+    .dashboard--item {
+        width: 160px;
+        height: 160px;
+    }
+    .dashboard--item .title--App {
+        width: 60px;
+        height: 60px;
+    }
+    .dashboard--item .title--App img{
+        width: 60px;
+        height: 60px;
+    }
+    .dashboard--item .title--App h3 {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .dashboard--item {
+        width: 95px;
+        height: 95px;
+    }
+    .dashboard--item .title--App {
+        width: 40px;
+        height: 40px;
+    }
+    .dashboard--item .title--App img{
+        width: 40px;
+        height: 40px;
+    }
+    .dashboard--item .title--App h3 {
+        font-size: 8px;
+    }
+}
+

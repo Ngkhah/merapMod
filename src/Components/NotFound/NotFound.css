@@ -1,0 +1,108 @@
+.notFound--Page {
+    width: 100%;
+    margin: 3rem 0;
+
+    background: white;
+}
+
+.notFound--Page .notFound--Page-404 .notFound {
+    text-align: center;
+    margin-top: 240px;
+}
+
+.notFound--Page .notFound--Page-404 {
+    width: 100%;
+    height: 720px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notFound--Page .notFound--Page-404 .notFound h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 55px;
+    color: #52627C;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.notFound--Page .notFound--Page-404 .notFound h4 {
+    color: #52627C;
+    text-align: center;
+
+}
+
+.notFound--Page .notFound--Page-404 .notFound .btn--NotFound {
+    color: #00CFD0;
+    text-align: center;
+    border: 1px solid #00CFD0;
+    border-radius: 5px;
+    background: none;
+    width: 180px;
+    transition: all 0.2s;
+    height: 40px;
+}
+
+.notFound--Page .notFound--Page-404 .notFound .btn--NotFound:hover {
+    color: white;
+    border: 1px solid white;
+    background: #00CFD0;
+    transition: all 0.2s;
+}
+
+
+@media only screen and (min-width: 1920px) {
+    .notFound--Page {
+        width: 1440px;
+        /* height: 100vh; */
+        margin: 3rem auto;
+        background: white;
+    }
+
+
+}
+
+@media only screen and (min-width: 1080px) and (max-width: 1919px) {
+
+}
+
+@media only screen and (min-width: 400px) and (max-width: 1079px) {
+
+}
+
+@media only screen and (max-width: 399px) {
+
+}
+
+.test--gif {
+    position: relative;
+    width: 100%;
+}
+
+.test--gif .gif-1 {
+    width: 230px;
+    height: 217px;
+    transform: translateY(30px) translateX(30px) rotate(0);
+    animation: gif 1.5s ease forwards 0.1s;
+    position: absolute;
+    top: -57px;
+    left: -36px;
+    z-index: 1;
+}
+
+@keyframes gif {
+    to {
+        transform: rotate(-17deg) translateY(0px);
+    }
+}
+
+.test--gif .gif-2 {
+    width: 215px;
+    height: 107px;
+    position: absolute;
+    top: 100px;
+    left: 0;
+}

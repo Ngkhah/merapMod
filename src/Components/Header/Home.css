@@ -1,0 +1,71 @@
+.menu--Home {
+    width: 100%;
+    height: 64px;
+    background: white;
+}
+
+.menu--Home__group #home--logo {
+    width: 137px;
+    height: 32px;
+    margin-left: 1rem;
+    /* position: absolute;
+    top: 16px;
+    left: 16px;
+    transform: translate(0px, 0px); */
+}
+
+.menu--Home__group .menu--Home__icons .logo--bell img {
+    width: 16px;
+    height: 16px;
+    margin: 0 10px;
+}
+
+
+
+.menu--Home__group .menu--Home__icons .logo--search img {
+    width: 16px;
+    height: 16px;
+    margin: 0 10px;
+
+}
+
+.menu--Home__group .menu--Home__icons .logo--avatar img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+
+
+
+}
+
+.menu--Home__group .menu--Home__icons .logo--bot img {
+    width: 12px;
+    height: 7px;
+    margin: 0 10px;
+
+}
+
+.menu--Home__group .menu--Home__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute;
+    top: 12px;
+    right: 12px;
+    transform: translate(0px, 0px); */
+}
+
+.menu--Home__group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+
+@media only screen and (min-width: 1920px) {
+    .menu--Home__group {
+        max-width: 1440px;
+        margin: 0 auto;
+
+    }
+}

@@ -1,0 +1,123 @@
+.profile .profileCover img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    margin-top: 3rem;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.profile .profileCover {
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.profile {}
+
+.profileForm .profileAvatar {
+    width: 300px;
+    height: 300px;
+    border: 5px solid white;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+.profileForm .profileAvatar .avatar {
+    width: 300px;
+    height: 300px;
+    border: 5px solid white;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: -50px;
+    right: 50px;
+}
+
+.profile .profileAvatar {
+    /* position: absolute;
+    bottom: 50px;
+    left: 100px; */
+}
+
+.profileForm {
+    width: 100%;
+    height: 100vh;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-color: white;
+}
+
+.profileAvatar .updateAva {
+    background: #e4e6eb;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 28px;
+    line-height: 55px;
+    position: absolute;
+    bottom: 80px;
+    right: 70px;
+}
+
+.profileForm .title {
+   margin: 2rem 1rem;
+}
+.profileForm .title h1{
+    font-size: 30px;
+    font-weight: 800;
+    margin: 0;
+ }
+ .profileForm .title h4{
+    font-size: 18px;
+    font-weight: 500;
+    color: #65676b;
+ }
+
+@media only screen and (min-width: 1920px) {
+    .profilePage {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .profileForm {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1919px) {
+    .profilePage {
+        width: 100%;
+        padding: 0 3rem;
+    }
+
+    .profileForm {
+        width: 100%;
+        padding: 0 3rem;
+    }
+
+}
+
+@media only screen and (min-width: 500px) and (max-width: 1279px) {
+    .profilePage {
+        width: 100%;
+    }
+
+    .profileForm {
+        width: 100%;
+        padding: 0 3rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .profilePage {
+        width: 100%;
+    }
+
+    .profileForm {
+        width: 100%;
+        padding: 0 3rem;
+    }
+}

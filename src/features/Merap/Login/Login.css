@@ -1,0 +1,120 @@
+.loginPage {
+    height: 100vh;
+}
+
+.loginPage {
+    opacity: 0.08;
+    background-image: linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(to right, #d5d5d5 1px, #9b9b9b 1px);
+    background-size: 20px 40px;
+}
+
+.bgLogin {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, #00CFD0 0%, #8DF6DA 108.33%);
+}
+
+.formLogin {
+    width: 100%;
+    height: 100vh;
+    background: white;
+}
+
+.motionGif {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    transform: translate(15%,15%);
+}
+
+.landingPage .motion {
+    position: relative;
+}
+
+/* .landingPage .motion .motionLogin{
+    position: absolute;
+    top: 0;
+    left: 0;
+}  */
+
+.landingPage .motion .motionLogin:nth-child(1) {
+    position: absolute;
+    top: 150px;
+    left: 178px;
+    width: 422px;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.2s;
+    transform: translateY(-60px);
+    animation: motion_1 1s ease forwards 0.2s;
+    
+}
+
+.landingPage .motion .motionLogin:nth-child(2) {
+    position: absolute;
+    top: 10px;
+    left: 16px;
+    z-index: 2;
+    width: 348px;
+    opacity: 0;
+    transition: all 0.2s;
+    transform: translateX(-30px);
+    animation: motion_1 1s ease forwards 0.4s;
+}
+
+.landingPage .motion .motionLogin:nth-child(3) {
+    position: absolute;
+    top: 470px;
+    left: 0;
+    z-index: 3;
+    width: 244px;
+    opacity: 0;
+    transition: all 0.2s;
+    transform: translateX(30px) translateY(60px);
+    animation: motion_3 1s ease forwards 0.6s;
+}
+
+.landingPage .motion .motionLogin:nth-child(4) {
+    position: absolute;
+    top: 380px;
+    left: 341px;
+    z-index: 4;
+    width: 254px;
+    opacity: 0;
+    transition: all 0.2s;
+    transform: translateX(30px) translateY(-30px);
+
+    animation: motion_4 1s ease forwards 0.8s;
+}
+
+@keyframes motion_1 {
+    to {
+        opacity: 1;
+        transform: translateX(0px) translateY(0px);
+        transition: all 0.5s;
+    }
+}
+
+@keyframes motion_4 {
+    to {
+        opacity: 1;
+        transition: all 0.5s;
+        transform: translateX(0px) translateY(0px);
+    }    
+}
+
+@keyframes motion_3 {
+    to {
+        opacity: 1;
+        transform: translateX(0px) translateY(0);
+        transition: all 0.5s;
+    }
+}
+
+@keyframes motion_2 {
+    to {
+        opacity: 1;
+        transform: translateX(0px) translateY(0px);
+        transition: all 0.5s;
+    }
+}
