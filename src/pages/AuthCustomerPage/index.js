@@ -6,8 +6,6 @@ import FormGroup from "@mui/material/FormGroup";
 import FormLabel from "@mui/material/FormLabel";
 import Grid from "@mui/material/Grid";
 import TextField from "@mui/material/TextField";
-import { Col, Row } from "antd";
-import "antd/dist/antd.css";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Login.css";
@@ -15,23 +13,23 @@ import "./Login.css";
 const Login = () => {
   return (
     <div>
-      <Row>
-        <Col span={14} className="landingPage">
-          <div className="bgLogin">
-            <div className="loginPage"></div>
+      <Grid container>
+        <Grid item xs={7} className="landing-page">
+          <div className="bg-login">
+            <div className="login-page"></div>
           </div>
-          <div className="motionGif">
+          <div className="login-motion">
             <div className="motion">
-              <img className="motionLogin" src="./img/motion/1.png" alt="" />
-              <img className="motionLogin" src="./img/motion/2.png" alt="" />
-              <img className="motionLogin" src="./img/motion/3.png" alt="" />
-              <img className="motionLogin" src="./img/motion/4.png" alt="" />
+              <img className="login-motion_item" src="./img/motion/1.png" alt="" />
+              <img className="login-motion_item" src="./img/motion/2.png" alt="" />
+              <img className="login-motion_item" src="./img/motion/3.png" alt="" />
+              <img className="login-motion_item" src="./img/motion/4.png" alt="" />
             </div>
           </div>
-        </Col>
-        <Col span={10}>
+        </Grid>
+        <Grid item xs={5} >
           <div
-            className="formLogin"
+            className="form-login"
             style={{
               width: "100%",
               display: "flex",
@@ -88,9 +86,7 @@ const Login = () => {
                         label="Nhớ mật khẩu"
                       />
                     </Grid>
-                    <Grid
-                      item
-                      xs={6}
+                    <Grid item xs={6}
                       style={{
                         display: "flex",
                         alignItems: "center",
@@ -118,8 +114,8 @@ const Login = () => {
               </FormGroup>
             </div>
           </div>
-        </Col>
-      </Row>
+        </Grid>
+      </Grid>
     </div>
   );
 };

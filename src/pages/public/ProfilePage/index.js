@@ -1,37 +1,36 @@
+import { Grid } from "@mui/material";
 import React from "react";
-import "./Profile.css";
 import { TiCamera } from "react-icons/ti";
-import { Col, Row } from "antd";
-import "antd/dist/antd.css";
+import "./Profile.css";
 
 const ProfilePage = () => {
   return (
-    <div className="profilePage">
+    <div className="profile-page">
       <div className="profile">
-        <div className="profileCover">
+        <div className="profile-cover">
           <img src="./img/cover2.jpg" alt="" />
         </div>
       </div>
-      <div className="profileForm">
-        <Row>
-          <Col span={7}>
-            <div className="profileAvatar">
+      <div className="profile-form">
+        <Grid container>
+          <Grid item xs={3}>
+            <div className="profile-form_avatar">
               <img className="avatar" src="./img/ava2.png" alt="" />
-              <div className="updateAva">
+              <div className="profile-form_update_avatar">
                 <TiCamera />
               </div>
             </div>
-          </Col>
-          <Col span={7}>
+          </Grid >
+          <Grid item xs={6}>
             <div className="title">
               <h1>Khanh Nguyen</h1>
               <h4>Front-end Developer</h4>
               <h5>Fresher</h5>
               
             </div>
-          </Col>
-          <Col span={10}></Col>
-        </Row>
+          </Grid >
+          <Grid item xs={3}></Grid>
+        </Grid >
       </div>
     </div>
   );

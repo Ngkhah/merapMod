@@ -1,16 +1,16 @@
-.notFound--Page {
+.notfound-page {
     width: 100%;
     margin: 3rem 0;
 
     background: white;
 }
 
-.notFound--Page .notFound--Page-404 .notFound {
+.notfound-page .notfound-page-404 .notFound {
     text-align: center;
     margin-top: 240px;
 }
 
-.notFound--Page .notFound--Page-404 {
+.notfound-page .notfound-page-404 {
     width: 100%;
     height: 720px;
     display: flex;
@@ -18,7 +18,7 @@
     align-items: center;
 }
 
-.notFound--Page .notFound--Page-404 .notFound h2 {
+.notfound-page .notfound-page-404 .notFound h2 {
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -29,13 +29,13 @@
     margin-bottom: 0;
 }
 
-.notFound--Page .notFound--Page-404 .notFound h4 {
+.notfound-page .notfound-page-404 .notFound h4 {
     color: #52627C;
     text-align: center;
 
 }
 
-.notFound--Page .notFound--Page-404 .notFound .btn--NotFound {
+.notfound-page .notfound-page-404 .notFound .btn-notfound {
     color: #00CFD0;
     text-align: center;
     border: 1px solid #00CFD0;
@@ -46,7 +46,7 @@
     height: 40px;
 }
 
-.notFound--Page .notFound--Page-404 .notFound .btn--NotFound:hover {
+.notfound-page .notfound-page-404 .notFound .btn-notfound:hover {
     color: white;
     border: 1px solid white;
     background: #00CFD0;
@@ -55,7 +55,7 @@
 
 
 @media only screen and (min-width: 1920px) {
-    .notFound--Page {
+    .notfound-page {
         width: 1440px;
         /* height: 100vh; */
         margin: 3rem auto;
@@ -77,12 +77,12 @@
 
 }
 
-.test--gif {
+.notfound-motion {
     position: relative;
     width: 100%;
 }
 
-.test--gif .gif-1 {
+.notfound-motion .notfound-motion_1 {
     width: 230px;
     height: 217px;
     transform: translateY(30px) translateX(30px) rotate(0);
@@ -99,7 +99,7 @@
     }
 }
 
-.test--gif .gif-2 {
+.notfound-motion .notfound-motion_2 {
     width: 215px;
     height: 107px;
     position: absolute;

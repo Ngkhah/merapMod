@@ -1,43 +1,43 @@
-.loginPage {
+.login-page {
     height: 100vh;
 }
 
-.loginPage {
+.login-page {
     opacity: 0.08;
     background-image: linear-gradient(#ffffff 1px, transparent 1px), linear-gradient(to right, #d5d5d5 1px, #9b9b9b 1px);
     background-size: 20px 40px;
 }
 
-.bgLogin {
+.bg-login {
     width: 100%;
     height: 100vh;
     background: linear-gradient(90deg, #00CFD0 0%, #8DF6DA 108.33%);
 }
 
-.formLogin {
+.form-login {
     width: 100%;
     height: 100vh;
     background: white;
 }
 
-.motionGif {
+.login-motion {
     position: absolute;
     top: 15%;
     left: 15%;
     transform: translate(15%,15%);
 }
 
-.landingPage .motion {
+.landing-page .motion {
     position: relative;
 }
 
-/* .landingPage .motion .motionLogin{
+/* .landing-page .motion .login-motion_item{
     position: absolute;
     top: 0;
     left: 0;
 }  */
 
-.landingPage .motion .motionLogin:nth-child(1) {
+.landing-page .motion .login-motion_item:nth-child(1) {
     position: absolute;
     top: 150px;
     left: 178px;
@@ -50,7 +50,7 @@
     
 }
 
-.landingPage .motion .motionLogin:nth-child(2) {
+.landing-page .motion .login-motion_item:nth-child(2) {
     position: absolute;
     top: 10px;
     left: 16px;
@@ -62,7 +62,7 @@
     animation: motion_1 1s ease forwards 0.4s;
 }
 
-.landingPage .motion .motionLogin:nth-child(3) {
+.landing-page .motion .login-motion_item:nth-child(3) {
     position: absolute;
     top: 470px;
     left: 0;
@@ -74,7 +74,7 @@
     animation: motion_3 1s ease forwards 0.6s;
 }
 
-.landingPage .motion .motionLogin:nth-child(4) {
+.landing-page .motion .login-motion_item:nth-child(4) {
     position: absolute;
     top: 380px;
     left: 341px;
