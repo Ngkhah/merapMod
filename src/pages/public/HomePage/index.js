@@ -1,10 +1,13 @@
 import Grid from "@mui/material/Grid";
 import React from "react";
 import { Link } from "react-router-dom";
+import Header from "../../Layout/HomeLayout/Header";
 import "./HomePage.css";
+
 const HomePage = () => {
   return (
     <div>
+      <Header />
       <div className="homepage-responsive">
         <Grid container style={{ margin: "1rem 0" }}>
           <Grid item xs={3}>

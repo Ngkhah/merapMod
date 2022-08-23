@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Header from "../Header";
 import GifNotFound from "./GifNotFound";
 import "./NotFound.css";
 
 const NotFound = () => {
   return (
     <div>
+      <Header />
       <div className="notfound-page">
         <div className="notfound-page-404">
           <div style={{ alignItems: "center", width: "215px" }}>
