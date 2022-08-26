@@ -1,4 +1,4 @@
-import { Box, Switch, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
 import Header from "../../Layout/HomeLayout/Header";
 import { DataGrid } from '@mui/x-data-grid';
@@ -6,19 +6,19 @@ import './Banner.css'
 
 
 const columns = [
-  { field: 'sTT', headerName: 'Thứ tự', width: 150 },
-  { field: 'id', headerName: 'Mã', width: 200 },
-  { field: 'tenLoai', headerName: 'Tên Loại', width: 200 },
+  { field: 'sTT', headerName: 'Thứ tự', width: 200 },
+  { field: 'id', headerName: 'Mã', width: 250 },
+  { field: 'tenLoai', headerName: 'Tên Loại', width: 300 },
   {
     field: 'moTa',
     headerName: 'Mô Tả',
-    width: 150,
+    width: 300,
   },
   {
     field: 'tinhTrang',
     headerName: 'Tình Trạng',
-    width: 300,
-    ValidityState:<Switch/>
+    width: 200,
+    
   },
 ];
 
@@ -41,7 +41,7 @@ const Banner = () => {
       <Box sx={{ mt: 8 }}>
         <Box sx={{ maxWidth: "1440px", margin: "0 auto" }}>
           <Box sx={{ margin: "1rem" }}>
-            <Typography sx={{ fontWeight: 700, mt: '7rem', mb: '2rem' }} variant="h5" color="palette.text.primary">Loại Banner</Typography>
+            <Typography sx={{ fontWeight: 700, mt: '7rem', mb: '2rem'}} variant="h5" color="palette.text.primary">Loại Banner</Typography>
             <Box className="focus" sx={{ height: 500 }}>
               <DataGrid
                 rows={rowss}
@@ -49,7 +49,6 @@ const Banner = () => {
                 pageSize={5}
                 rowsPerPageOptions={[5]}
                 checkboxSelection
-                Switch
                 sx={{ width: '100%', bgcolor: 'background.paper', border: 0, pt: '1rem', px: '2rem'}}
               />
             </Box>
