@@ -8,53 +8,11 @@
     background: white;
     border-radius: 15px;
     transition: all 0.5s;
-
 }
-
 
 .dashboard-item:hover {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     transition: all 0.2s;
-}
-
-.dashboard-item .title-app h3 {
-    overflow: hidden;
-    position: relative;
-
-}
-
-.dashboard-item .title-app h3 {
-    background-image: linear-gradient(to right,
-            #01a79d,
-            #01a79d 50%,
-            #000 50%);
-    background-size: 200% 100%;
-    background-position: -100%;
-    padding: 5px 0;
-    position: relative;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.3s ease-in-out;
-}
-
-.dashboard-item:before .title--App h3 {
-    content: '';
-    background: #01a79d;
-    display: block;
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    transition: all 0.3s ease-in-out;
-}
-
-.dashboard-item:hover .title--App h3 {
-    background-position: 0;
-}
-
-.dashboard-item:hover::before .title--App h3 {
-    width: 100%;
 }
 
 @media only screen and (min-width: 1920px) {
@@ -92,9 +50,6 @@
         width: 60px;
         height: 60px;
     }
-    .dashboard-item .title-app h3 {
-        font-size: 10px;
-    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -109,9 +64,6 @@
     .dashboard-item .title-app img{
         width: 40px;
         height: 40px;
-    }
-    .dashboard-item .title-app h3 {
-        font-size: 8px;
     }
 }
 

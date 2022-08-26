@@ -1,7 +1,7 @@
 .notfound-page {
     width: 100%;
+    margin-top: 6rem;
     margin: 3rem 0;
-
     background: white;
 }
 
@@ -59,23 +59,18 @@
         width: 1440px;
         /* height: 100vh; */
         margin: 3rem auto;
+        margin-top: 7rem;
         background: white;
     }
 
 
 }
 
-@media only screen and (min-width: 1080px) and (max-width: 1919px) {
+@media only screen and (min-width: 1080px) and (max-width: 1919px) {}
 
-}
+@media only screen and (min-width: 400px) and (max-width: 1079px) {}
 
-@media only screen and (min-width: 400px) and (max-width: 1079px) {
-
-}
-
-@media only screen and (max-width: 399px) {
-
-}
+@media only screen and (max-width: 399px) {}
 
 .notfound-motion {
     position: relative;

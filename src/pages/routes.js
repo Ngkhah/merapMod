@@ -22,21 +22,35 @@ const homeRoutes = [
     component: import('./Layout/HomeLayout/NotFound')
   },
   {
-    path: '/:somestring',
-    name: 'NotFound',
+    path: '/darkmode',
+    name: 'DarkMode',
     exact: true,
-    component: import('./Layout/HomeLayout/NotFound')
-  }, {
+    component: import('./Layout/HomeLayout/DarkMode/DarkMode')
+  },
+  {
+    path: '/banner',
+    name: 'Banner',
+    exact: true,
+    component: import('./public/Ecommerce')
+  },
+  {
     path: '/profile',
     name: 'Profile',
     exact: true,
     component: import('./public/ProfilePage')
-  }, {
+  }, 
+  {
     path: '/sitemap',
     name: 'Site Map',
     exact: true,
-    component: import('./public/SiteMap')
-  }
+    component: import('./Layout/HomeLayout/SiteMap')
+  },
+  {
+    path: '/:somestring',
+    name: 'NotFound',
+    exact: true,
+    component: import('./Layout/HomeLayout/NotFound')
+  }, 
 ];
 
 const allRoutes = {
