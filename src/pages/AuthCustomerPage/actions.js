@@ -14,7 +14,7 @@ const actions = {
       const { token, user,customer } = response.data;
 
       window.localStorage.setItem(
-        "authcus",
+        "asauth",
         JSON.stringify({token,user})
       );
 
@@ -27,38 +27,40 @@ const actions = {
           customer
         }
       });
+
       
     } catch (error) {
       // dispatch({ 
       //   type: constants.USER_LOGIN_ERROR
       // });
       // Errors.handle(error);
-      console.log(error);
+      console.log(error,'login ko thanh cong');
     }
   },
 
-  // doGetUserInfo: () => async (dispatch) => { // laays thoong tin user
-  //   try {
-  //   dispatch({ type: constants.USER_GET_START});
-  //     const response = await services.getUser();
+  doGetUserInfo: () => async (dispatch) => { // laays thoong tin user
+    try {
+    dispatch({ type: constants.USER_GET_START});
+      const response = await services.getUser();
 
-  //     const { user,customer } = response.data;
+      const { user,customer } = response.data;
 
-  //     dispatch({ 
-  //       type: constants.USER_GET_SUCCESS,
-  //       payload: {
-  //         user,
-  //         customer
-  //       }
-  //     });
+      dispatch({ 
+        type: constants.USER_GET_SUCCESS,
+        payload: {
+          user,
+          customer
+        }
+      });
       
-  //   } catch (error) {
-  //     dispatch({ 
-  //       type: constants.USER_GET_ERROR
-  //     });
-  //     Errors.handle(error);
-  //   }
-  // },
+    } catch (error) {
+      dispatch({ 
+        type: constants.USER_GET_ERROR
+      });
+      // Errors.handle(error);
+      console.log(error);
+    }
+  },
 
   // doLoginKey: (data) => async (dispatch) => { // đăng nhập key
   //   try {

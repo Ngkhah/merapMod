@@ -3,10 +3,20 @@ import { Link } from "react-router-dom";
 import data from "./data";
 import Header from "../Header";
 import "./SiteMap.css";
-import SiteMap from "./SiteMap";
+
 import { Box } from "@mui/material";
 
+
+const SiteMap = ({data}) => {
+  return (
+    <div>
+      {data.map(item => <li><Link to="/">{item.permission_key}</Link></li>)}
+    </div>
+  )
+}
+
 const SitemapPage = () => {
+
   return (
     <Fragment>
       <Header />
@@ -33,9 +43,10 @@ const SitemapPage = () => {
             </li>
           </ul>
         </nav></Box>
-      
     </Fragment>
   );
 };
 
 export default SitemapPage;
+
+

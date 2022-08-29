@@ -6,6 +6,7 @@ import Header from "../../Layout/HomeLayout/Header";
 import "./HomePage.css";
 
 const HomePage = () => {
+
   return (
     <Box>
       <Header />
@@ -13,7 +14,7 @@ const HomePage = () => {
         <Box className="homepage-responsive" style={{ marginTop: "7rem" }}>
           <Grid container style={{ margin: "1rem 0" }}  >
             <Grid item xs={3} >
-              <Link to="/darkmode" style={{ textDecoration: "none" }}>
+              <Link to="/notfound" style={{ textDecoration: "none" }}>
                 <Box sx={{ bgcolor: "background.btn" }} className="dashboard-item">
                   <Box className="title-app">
                     <img src="./img/icon 1.png" alt="" />
@@ -37,7 +38,7 @@ const HomePage = () => {
               </Link>
             </Grid>
             <Grid item xs={3}>
-              <Link to="/notfound" style={{ textDecoration: "none" }}>
+              <Link to="/filter" style={{ textDecoration: "none" }}>
                 <Box sx={{ bgcolor: "background.btn" }} className="dashboard-item">
                   <Box className="title-app">
                     <img src="./img/icon 3.png" alt="" />

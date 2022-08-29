@@ -6,19 +6,20 @@ import FormControlLabel from "@mui/material/FormControlLabel";
 import FormGroup from "@mui/material/FormGroup";
 import FormLabel from "@mui/material/FormLabel";
 import Grid from "@mui/material/Grid";
-import TextField from "@mui/material/TextField";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import * as Yup from "yup";
+import { CssTextField } from "../../Theme/store";
 import actions from "./actions";
 import "./Login.css";
 
+
 const validationSchema = Yup.object().shape({
-  phone: Yup.string()
+  username: Yup.string()
     .required("Email không được để trống")
-    .min(9, "Ít nhất 3 ký tự")
+    .min(3, "Ít nhất 3 ký tự")
     .max(12, "Tối đa 255 ký tự"),
   password: Yup.string()
     .required("Mật khẩu không được để thống")
@@ -44,6 +45,8 @@ const Login = () => {
   const onSubmit = (data) => {
     dispatch(actions.doLogin(data));
   };
+
+
 
 
 
@@ -123,15 +126,15 @@ const Login = () => {
                     noValidate
                     autoComplete="off"
                   >
-                    <TextField
-                      {...register("phone")}
-                      error={errors.phone ? true : false}
-                      helperText={errors.phone && errors.phone.message}
+                    <CssTextField
+                      {...register("username")}
+                      error={errors.username ? true : false}
+                      helperText={errors.username && errors.username.message}
                       id="outlined-basic"
                       label="Email / Mã nhân viên"
                       variant="outlined"
                     />
-                    <TextField
+                    <CssTextField
                       {...register("password")}
                       error={errors.password ? true : false}
                       helperText={errors.password && errors.password.message}
@@ -143,7 +146,7 @@ const Login = () => {
                     <Grid container>
                       <Grid item xs={6}>
                         <FormControlLabel
-                          control={<Checkbox defaultChecked />}
+                          control={<Checkbox defaultChecked color="default" />}
                           label="Nhớ mật khẩu"
                         />
                       </Grid>
@@ -182,6 +185,7 @@ const Login = () => {
                     </Button>
                   </Box>
                 </FormGroup>
+                      
               </form>
             </div>
           </div>

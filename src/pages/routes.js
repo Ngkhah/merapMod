@@ -22,16 +22,16 @@ const homeRoutes = [
     component: import('./Layout/HomeLayout/NotFound')
   },
   {
-    path: '/darkmode',
-    name: 'DarkMode',
+    path: '/filter',
+    name: 'NotFound',
     exact: true,
-    component: import('./Layout/HomeLayout/DarkMode/DarkMode')
+    component: import('./public/Ecommerce/Banner/FiltersBanner')
   },
   {
     path: '/banner',
     name: 'Banner',
     exact: true,
-    component: import('./public/Ecommerce')
+    component: import('./public/Ecommerce/Banner')
   },
   {
     path: '/profile',

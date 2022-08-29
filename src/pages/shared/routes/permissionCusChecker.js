@@ -1,6 +1,6 @@
 export const isAuthenticated = () => {
   if (typeof window === "undefined") return true;
-  let data = window.localStorage.getItem("authcus");
+  let data = window.localStorage.getItem("asauth");
   if (data) {
     let token = JSON.parse(data).token;
     if (token) return token;

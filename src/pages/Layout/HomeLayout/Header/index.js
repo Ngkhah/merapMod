@@ -2,7 +2,7 @@ import { Box, IconButton } from '@mui/material';
 import React, { useContext } from 'react'
 import { MdBrightness4, MdBrightness5 } from 'react-icons/md';
 import { Link } from 'react-router-dom';
-import { ColorModeContext } from '../DarkMode/store';
+import { ColorModeContext } from '../../../../Theme/store';
 import "./Home.css"
 
 

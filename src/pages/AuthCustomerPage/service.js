@@ -1,38 +1,36 @@
 import ascusapi from '../../apis/ascusapi';
 
-export const login = async ({phone, password}) => { // đăng nhập
-  const respone = await ascusapi.post('ecommerce/auth/login', {phone, password});
+export const login = async ({username, password}) => { // đăng nhập
+  const respone = await ascusapi.post('auth/login', {username, password});
   return respone;
 }
 
-export const resetPass = async (data) => { // reset pass
-  const respone = await ascusapi.post('ecommerce/auth/reset-password', data);
+export const ressetPassword = async ({email}) => {
+  const respone = await ascusapi.post('auth/reset-password', {email});
   return respone;
 }
 
-export const loginZalo = async ({id_zalo}) => { // đăng nhập
-  const respone = await ascusapi.post('ecommerce/auth/login-zalo', {id_zalo});
+export const changePassword = async (data) => {
+  const respone = await ascusapi.post('auth/change-password', data);
   return respone;
 }
 
-export const getUser = async () => { // lấy thông tin
-  const respone = await ascusapi.get('ecommerce/auth/user-info');
+export const checkToken = async ({token}) => {
+  const respone = await ascusapi.post('auth/check-token', {token});
   return respone;
 }
 
-export const updateCustomer = async (data) => { // cập nhật thông tin khách hàng
-  const respone = await ascusapi.post('ecommerce/auth/update-customer', data);
+export const logout = async (data) => { // logout 
+  const respone = await ascusapi.post('auth/logout', data);
   return respone;
 }
 
-
-export const updateUser = async (data) => { // cập nhật thông tin user
-  const respone = await ascusapi.post('ecommerce/auth/update-user', data);
+export const userInfo = async () => { // thoong
+  const respone = await ascusapi.post('acc/employees/info');
   return respone;
 }
 
-
-export const changePassword = async (data) => { // đổi mật khẩu
-  const respone = await ascusapi.post('ecommerce/auth/update-password', data);
+export const getUser = async () => { // thoong
+  const respone = await ascusapi.post('acc/employees/info');
   return respone;
 }
