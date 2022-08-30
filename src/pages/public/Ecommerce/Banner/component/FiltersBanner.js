@@ -125,7 +125,7 @@ const FiltersBanner = (data) => {
                   label="Tình trạng"
                   variant="outlined"
                   placeholder="Tình trạng"
-                  sx={{ width: "100%" }}
+                  sx={{ width: "100%"}}
                 />
               </Grid>
             </Grid>
@@ -133,7 +133,7 @@ const FiltersBanner = (data) => {
         </DialogContent>
         <DialogActions>
           <ColorButton
-            sx={{ height: "40px", width: "300px" }}
+            sx={{ height: "40px", width: "300px" , mb:'1rem'}}
             onClick={handleClose}
           >
             Áp dụng
