@@ -95,7 +95,7 @@ const FiltersBanner = (data) => {
         </BootstrapDialogTitle>
         <DialogContent sx={{ p: 0, borderRadius: 0 }}>
           <Box sx={{ flexGrow: 1, p: 0 }}>
-            <Grid container spacing={1} sx={{ my: "1rem" }}>
+            <Grid container spacing={2} sx={{ my: "1rem", px:'5rem' }} >
               <Grid item xs={6}>
                 <CssTextField
                   label="Mã"
