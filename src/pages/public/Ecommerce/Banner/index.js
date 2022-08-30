@@ -1,10 +1,13 @@
-import { Box, Button, Switch, Typography } from "@mui/material";
+import { Box, Button, Grid, Switch, Typography } from "@mui/material";
 import React, { useState } from "react";
 import Header from "../../../Layout/HomeLayout/Header";
 import { DataGrid } from '@mui/x-data-grid';
 import './Banner.css'
-import FiltersBanner from "./FiltersBanner";
-
+import FiltersBanner from "./component/FiltersBanner";
+import Edit from "./component/Edit";
+import Delete from "./component/Delete";
+import { ColorButton } from "../../../../Theme/store";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   const rowss = [
@@ -47,9 +50,20 @@ const Banner = () => {
           <Box sx={{ margin: "1rem" }}>
             <Typography sx={{ fontWeight: 700, mt: '7rem', mb: '2rem' }} variant="h5" color="palette.text.primary">Loại Banner</Typography>
             <Box>
-              <FiltersBanner data={selectedRows.map(item=>item.id)} />
-              
+              <Grid container>
+                <Grid xs={6}>
+                  <Box sx={{ display: 'flex', mb: 2 }}>
+                    <FiltersBanner />
+                    <Edit data={selectedRows.map(item => item.id)} />
+                    <Delete data={selectedRows.map(item => item.id)} />
+                  </Box>
+                </Grid>
+                <Grid xs={6} sx={{ display: "flex", justifyContent: "flex-end", height: '40px' }}>
+                  <Link to='/addbanner'><ColorButton sx={{ width: '150px', fontWeight: "200" }}>Thêm Banner</ColorButton></Link>
+                </Grid>
+              </Grid>
             </Box>
+
             <Box className="focus" sx={{ height: 500 }}>
               <DataGrid
                 color="default"

@@ -28,11 +28,9 @@ export const CssTextField = styled(TextField)({
 
 export const ColorButton = styled(Button)(({ theme }) => ({
   color: 'white',
-  lineHeight:"40px",
+  // lineHeight:"40px",
   borderRadius:"10px",
-  height: "40px",
-  width:"300px",
-  margin: '1rem',
+  // margin: '1rem',
   backgroundColor: '#00A79D',
   '&:hover': {
     backgroundColor: '#374957',
@@ -41,15 +39,24 @@ export const ColorButton = styled(Button)(({ theme }) => ({
 
 export const ButtonLine = styled(Button)(({ theme }) => ({
   color: '#374957',
-  lineHeight:"40px",
   borderRadius:"10px",
-  height: "40px",
-  width:"150px",
-  marginBottom: '1rem',
   backgroundColor: '#F7FAFB',
   border:' 1px solid #D2DCE1',
   '&:hover': {
     backgroundColor: '#ffffff',
+    border:' 1px solid #374957',
+  },'&:focus': {
+    backgroundColor: '#ffffff',
+  },
+}));
+
+export const ButtonWhite = styled(Button)(({ theme }) => ({
+  color: '#374957',
+  borderRadius:"10px",
+  backgroundColor: '#ffffff',
+  border:' 1px solid #D2DCE1',
+  '&:hover': {
+    backgroundColor: '##F7FAFB',
     border:' 1px solid #374957',
   },'&:focus': {
     backgroundColor: '#ffffff',
