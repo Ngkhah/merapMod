@@ -133,7 +133,7 @@ const FiltersBanner = (data) => {
         </DialogContent>
         <DialogActions>
           <ColorButton
-            sx={{ height: "40px", width: "300px" , mb:'1rem'}}
+            sx={{ height: "40px", width: "300px" , mb:'1rem', mr:'1rem'}}
             onClick={handleClose}
           >
             Áp dụng
