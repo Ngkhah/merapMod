@@ -45,12 +45,12 @@ const homeRoutes = [
     exact: true,
     component: import('./Layout/HomeLayout/SiteMap')
   },
-  {
-    path: '/:somestring',
-    name: 'NotFound',
-    exact: true,
-    component: import('./Layout/HomeLayout/NotFound')
-  }, 
+  // {
+  //   path: '/:somestring',
+  //   name: 'NotFound',
+  //   exact: true,
+  //   component: import('./Layout/HomeLayout/NotFound')
+  // }, 
 ];
 
 const allRoutes = {

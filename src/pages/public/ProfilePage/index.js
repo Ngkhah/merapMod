@@ -1,14 +1,14 @@
 import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import { TiCamera } from "react-icons/ti";
-import Header from "../../Layout/HomeLayout/Header";
+import Menu from "../../Layout/HomeLayout/Header/Menu";
 import "./Profile.css";
 
 const ProfilePage = () => {
   return (
     <Box>
-      <Header />
-      <Box sx={{mt:8}} className="profile-page">
+      <Menu />
+      <Box sx={{mt:"2rem"}} className="profile-page">
         <Box className="profile">
           <Box className="profile-cover">
             <img src="./img/cover2.jpg" alt="" />
@@ -29,7 +29,6 @@ const ProfilePage = () => {
               <Typography sx={{ fontWeight: 700}} variant="h3" color="palette.text.primary">Khanh Nguyen</Typography>
               <Typography sx={{ fontWeight: 400}} variant="h5" color="palette.text.primary">Front-end Developer</Typography>
               <Typography sx={{ fontWeight: 300}} variant="h6" color="palette.text.primary">Fresher</Typography>
-              
               </Box>
             </Grid>
             <Grid item xs={3}></Grid>

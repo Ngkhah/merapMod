@@ -29,7 +29,7 @@ export const CssTextField = styled(TextField)({
 export const ColorButton = styled(Button)(({ theme }) => ({
   color: 'white',
   // lineHeight:"40px",
-  borderRadius:"10px",
+  borderRadius: "10px",
   // margin: '1rem',
   backgroundColor: '#00A79D',
   '&:hover': {
@@ -39,31 +39,58 @@ export const ColorButton = styled(Button)(({ theme }) => ({
 
 export const ButtonLine = styled(Button)(({ theme }) => ({
   color: '#374957',
-  borderRadius:"10px",
-  backgroundColor: '#F7FAFB',
-  border:' 1px solid #D2DCE1',
+  borderRadius: "10px",
+  backgroundColor: '#EFF3F6',
+  border: ' 1px solid #D2DCE1',
   '&:hover': {
     backgroundColor: '#ffffff',
-    border:' 1px solid #374957',
-  },'&:focus': {
+    border: ' 1px solid #EFF3F6',
+  }, '&:focus': {
     backgroundColor: '#ffffff',
   },
 }));
 
 export const ButtonWhite = styled(Button)(({ theme }) => ({
   color: '#374957',
-  borderRadius:"10px",
+  borderRadius: "10px",
   backgroundColor: '#ffffff',
-  border:' 1px solid #D2DCE1',
+  textTransform: 'none',
+  border: ' 1px solid #D2DCE1',
   '&:hover': {
-    backgroundColor: '##F7FAFB',
-    border:' 1px solid #374957',
-  },'&:focus': {
+    backgroundColor: '#EFF3F6',
+    border: ' 1px solid #EFF3F6',
+  }, '&:focus': {
     backgroundColor: '#ffffff',
   },
 }));
 
+export const ButtonWhite1 = styled(Button)(({ theme }) => ({
+  color: '#374957',
+  borderRadius: "10px",
+  backgroundColor: '#ffffff',
+  textTransform: 'none',
+  border: ' 1px solid #ffffff',
+  '&:hover': {
+    backgroundColor: '#EFF3F6',
+    border: ' 1px solid #EFF3F6',
+  }, '&:focus': {
+    backgroundColor: '#ffffff',
+  },
+}));
 
+export const ButtonWhite2 = styled(Button)(({ theme }) => ({
+  color: '#374957',
+  borderRadius: "10px",
+  backgroundColor: '#EFF3F6',
+  border: ' 1px solid #EFF3F6',
+  textTransform: 'none',
+  '&:hover': {
+    border: ' 1px solid #E5ECF0',
+  }, '&:focus': {
+    backgroundColor: '#EFF3F6',
+    border: ' 1px solid #E5ECF0',
+  },
+}));
 
 export const ColorContextProvider = ({ children }) => {
   const [mode, setMode] = useState("light");
@@ -109,6 +136,12 @@ export const ColorContextProvider = ({ children }) => {
           mode: mode,
           ...themeObj[mode]
         },
+        typography: {
+          fontFamily: [
+            'Manrope', 'sans-serif'
+          ].join(','),
+          
+        }
       }),
     [mode]
   );

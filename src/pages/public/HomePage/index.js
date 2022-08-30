@@ -38,7 +38,7 @@ const HomePage = () => {
               </Link>
             </Grid>
             <Grid item xs={3}>
-              <Link to="/filter" style={{ textDecoration: "none" }}>
+              <Link to="/notfound" style={{ textDecoration: "none" }}>
                 <Box sx={{ bgcolor: "background.btn" }} className="dashboard-item">
                   <Box className="title-app">
                     <img src="./img/icon 3.png" alt="" />

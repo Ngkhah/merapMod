@@ -1,13 +1,13 @@
-import { Box, Button, Grid, Switch, Typography } from "@mui/material";
-import React, { useState } from "react";
-import Header from "../../../Layout/HomeLayout/Header";
+import { Box, Grid, Switch, Typography } from "@mui/material";
 import { DataGrid } from '@mui/x-data-grid';
-import './Banner.css'
-import FiltersBanner from "./component/FiltersBanner";
-import Edit from "./component/Edit";
-import Delete from "./component/Delete";
-import { ColorButton } from "../../../../Theme/store";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { ColorButton } from "../../../../Theme/store";
+import Menu from "../../../Layout/HomeLayout/Header/Menu";
+import './Banner.css';
+import Delete from "./component/Delete";
+import Edit from "./component/Edit";
+import FiltersBanner from "./component/FiltersBanner";
 
 const Banner = () => {
   const rowss = [
@@ -44,11 +44,12 @@ const Banner = () => {
 
   return (
     <Box>
-      <Header />
-      <Box sx={{ mt: 8 }}>
+      <Menu />
+
+      <Box sx={{ mt: '2rem' }}>
         <Box sx={{ maxWidth: "1440px", margin: "0 auto" }}>
           <Box sx={{ margin: "1rem" }}>
-            <Typography sx={{ fontWeight: 700, mt: '7rem', mb: '2rem' }} variant="h5" color="palette.text.primary">Loại Banner</Typography>
+            <Typography sx={{ fontWeight: 700, my:2 }} variant="h5" color="palette.text.primary">Loại Banner</Typography>
             <Box>
               <Grid container>
                 <Grid xs={6}>
