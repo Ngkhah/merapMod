@@ -1,15 +1,12 @@
-import { Box, Grid, Switch, Typography } from "@mui/material";
-import { DataGrid } from '@mui/x-data-grid';
+import { Box, Grid, Typography } from "@mui/material";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ColorButton } from "../../../../Theme/store";
+import { ColorButton, StyledDataGrid, SwitchTable } from "../../../../Theme/store";
 import Menu from "../../../Layout/HomeLayout/Header/Menu";
 import './Banner.css';
 import Delete from "./component/Delete";
 import Edit from "./component/Edit";
 import FiltersBanner from "./component/FiltersBanner";
-import Fab from '@mui/material/Fab';
-import AddIcon from '@mui/icons-material/Add';
 const Banner = () => {
   const rowss = [
     { sTT: 1, id: 'P001', tenLoai: 'Banner ảnh trang chủ giữa', moTa: 'Nhãn hàng nổi bật', tinhTrang: true },
@@ -35,8 +32,8 @@ const Banner = () => {
     {
       field: 'tinhTrang',
       headerName: 'Tình Trạng',
-      width: 200,
-      renderCell: (params) => <Switch checked={params.row.tinhTrang} />
+      width: 244,
+      renderCell: (params) => <SwitchTable checked={params.row.tinhTrang} />
 
     },
   ];
@@ -70,7 +67,7 @@ const Banner = () => {
             </Box>
 
             <Box className="focus" sx={{ height: 500 }}>
-              <DataGrid
+              <StyledDataGrid
                 color="default"
                 rows={rowss}
                 columns={columns}
@@ -89,7 +86,9 @@ const Banner = () => {
                 {...rowss}
               />
             </Box>
-          </Box>
+
+
+            </Box>
         </Box>
       </Box>
     </Box>
