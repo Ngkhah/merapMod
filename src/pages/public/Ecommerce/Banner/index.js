@@ -8,7 +8,8 @@ import './Banner.css';
 import Delete from "./component/Delete";
 import Edit from "./component/Edit";
 import FiltersBanner from "./component/FiltersBanner";
-
+import Fab from '@mui/material/Fab';
+import AddIcon from '@mui/icons-material/Add';
 const Banner = () => {
   const rowss = [
     { sTT: 1, id: 'P001', tenLoai: 'Banner ảnh trang chủ giữa', moTa: 'Nhãn hàng nổi bật', tinhTrang: true },
@@ -49,7 +50,7 @@ const Banner = () => {
       <Box sx={{ mt: '2rem' }}>
         <Box sx={{ maxWidth: "1440px", margin: "0 auto" }}>
           <Box sx={{ margin: "1rem" }}>
-            <Typography sx={{ fontWeight: 700, my:2 }} variant="h5" color="palette.text.primary">Loại Banner</Typography>
+            <Typography sx={{ fontWeight: 700, my: 2 }} variant="h5" color="palette.text.primary">Loại Banner</Typography>
             <Box>
               <Grid container>
                 <Grid xs={6}>
@@ -60,6 +61,9 @@ const Banner = () => {
                   </Box>
                 </Grid>
                 <Grid xs={6} sx={{ display: "flex", justifyContent: "flex-end", height: '40px' }}>
+                  {/* <Fab color="background.default" aria-label="add">
+                    <AddIcon />
+                  </Fab> */}
                   <Link to='/addbanner'><ColorButton sx={{ width: '150px', fontWeight: "200" }}>Thêm Banner</ColorButton></Link>
                 </Grid>
               </Grid>
