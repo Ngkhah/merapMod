@@ -1,24 +1,23 @@
-import { Container, ListItem, Typography } from "@mui/material";
+import { Container, ListItem, ListItemText, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
+import { AiOutlinePicCenter } from "react-icons/ai";
+import { BsFillDiagram3Fill } from "react-icons/bs";
 import { FaEllipsisH, FaUsers } from "react-icons/fa";
 import { FiChevronDown } from "react-icons/fi";
 import { HiQrcode } from "react-icons/hi";
 import { RiHome2Line } from "react-icons/ri";
 import { TiShoppingCart } from "react-icons/ti";
-import { BsFillDiagram3Fill } from "react-icons/bs";
 import { VscServerProcess } from "react-icons/vsc";
-import { AiOutlinePicCenter } from "react-icons/ai";
 
+import { Link } from "react-router-dom";
 import Header from ".";
 import {
   ButtonWhite1,
   ButtonWhite2,
-  ButtonWhiteList,
   LightTooltip,
-  ListMenu,
+  ListMenu
 } from "../../../../Theme/store";
-import { Link } from "react-router-dom";
 
 const style = {
   position: "fixed",
@@ -35,7 +34,6 @@ const styleList = {
   width: "100%",
   maxWidth: 360,
   bgcolor: "background.paper",
-  fontSize: "10px",
 };
 
 const styleContainer = {
@@ -54,64 +52,79 @@ const icons2 = {
   fontSize: "20px",
   lineHeight: "20px",
 };
+const flex = {
+  display: "flex",
+  alignItems: "center",
+  fontSize: "14px",
+};
 
 const DashboardMenu = (
   <ListMenu sx={styleList} component="nav" aria-label="mailbox folders">
-    <ListItem>
-      <ButtonWhiteList sx={{ width: "100%", height: "40px" }}>
-        <Typography sx={icons}>
-          <FaUsers />
-        </Typography>
-        HRM
-      </ButtonWhiteList>
+    <ListItem button>
+      <ListItemText>
+        <Box sx={flex}>
+          <Typography sx={icons}>
+            <FaUsers />
+          </Typography>
+          HRM
+        </Box>
+      </ListItemText>
     </ListItem>
-    <ListItem>
-      <ButtonWhiteList sx={{ width: "100%" }}>
-        <Typography sx={icons}>
-          <VscServerProcess />
-        </Typography>
-        CRM
-      </ButtonWhiteList>
+    <ListItem button>
+      <ListItemText>
+        <Box sx={flex}>
+          <Typography sx={icons}>
+            <VscServerProcess />
+          </Typography>
+          CRM
+        </Box>
+      </ListItemText>
     </ListItem>
-    <ListItem>
-      <ButtonWhiteList sx={{ width: "100%" }}>
-        <Typography sx={icons}>
-          <BsFillDiagram3Fill />
-        </Typography>
-        DMS
-      </ButtonWhiteList>
+    <ListItem button>
+      <ListItemText>
+        <Box sx={flex}>
+          <Typography sx={icons}>
+            <BsFillDiagram3Fill />
+          </Typography>
+          DMS
+        </Box>
+      </ListItemText>
     </ListItem>
-    <ListItem>
-      <ButtonWhiteList sx={{ width: "100%" }}>
-        <Typography sx={icons}>
-          <TiShoppingCart />
-        </Typography>
-        ECOMMERCE
-      </ButtonWhiteList>
+    <ListItem button>
+      <ListItemText>
+        <Box sx={flex}>
+          <Typography sx={icons}>
+            <TiShoppingCart />
+          </Typography>
+          ECOMMERCE
+        </Box>
+      </ListItemText>
     </ListItem>
-    <ListItem>
-      <ButtonWhiteList sx={{ width: "100%" }}>
-        <Typography sx={icons}>
-          <HiQrcode />
-        </Typography>
-        QR Code
-      </ButtonWhiteList>
+    <ListItem button>
+      <ListItemText>
+        <Box sx={flex}>
+          <Typography sx={icons}>
+            <HiQrcode />
+          </Typography>
+          QR Code
+        </Box>
+      </ListItemText>
     </ListItem>
   </ListMenu>
 );
 
 const EcommerceMenu = (
   <ListMenu sx={styleList} component="nav" aria-label="mailbox folders">
-    <Link to="/banner">
-      <ListItem>
-        <ButtonWhiteList sx={{ width: "100%", height: "40px" }}>
+    <ListItem button>
+      <ListItemText>
+        <Box sx={flex}>
           <Typography sx={icons}>
             <AiOutlinePicCenter />
           </Typography>
           Banner
-        </ButtonWhiteList>
-      </ListItem>
-    </Link>
+        </Box>
+      </ListItemText>
+    </ListItem>
   </ListMenu>
 );
 
@@ -121,9 +134,9 @@ const Menu = () => {
       <Header />
       <Box sx={style}>
         <Container sx={styleContainer} style={{}}>
-          <LightTooltip title={DashboardMenu} placement="bottom-start">
+          <LightTooltip title={DashboardMenu} color="palette.text.primary" placement="bottom-start">
             <Link to="/">
-              <ButtonWhite2 sx={{ width: "200px", height: "40px", mr: 1 }}>
+              <ButtonWhite2 sx={{ width: "200px", height: "40px", mr: "1rem" }}>
                 <Typography sx={icons}>
                   <RiHome2Line />
                 </Typography>
@@ -134,9 +147,9 @@ const Menu = () => {
               </ButtonWhite2>
             </Link>
           </LightTooltip>
-          <LightTooltip title={EcommerceMenu} placement="bottom-start">
+          <LightTooltip title={EcommerceMenu}  placement="bottom-start">
             <Link to="/sitemap">
-              <ButtonWhite1 sx={{ width: "150px", height: "40px", mr: 1 }}>
+              <ButtonWhite1 sx={{ width: "150px", height: "40px", mr: "1rem" }}>
                 <Typography sx={icons}>
                   <TiShoppingCart />
                 </Typography>
@@ -145,7 +158,7 @@ const Menu = () => {
             </Link>
           </LightTooltip>
           <Link to="/">
-            <ButtonWhite1 sx={{ width: "100px", height: "40px", mr: 1 }}>
+            <ButtonWhite1 sx={{ width: "100px", height: "40px", mr: "1rem" }}>
               <Typography sx={icons}>
                 <FaEllipsisH />
               </Typography>

@@ -34,25 +34,6 @@
 
 }
 
-.notfound-page .notfound-page-404 .notFound .btn-notfound {
-    color: #00CFD0;
-    text-align: center;
-    border: 1px solid #00CFD0;
-    border-radius: 5px;
-    background: none;
-    width: 180px;
-    transition: all 0.2s;
-    height: 40px;
-}
-
-.notfound-page .notfound-page-404 .notFound .btn-notfound:hover {
-    color: white;
-    border: 1px solid white;
-    background: #00CFD0;
-    transition: all 0.2s;
-}
-
-
 @media only screen and (min-width: 1920px) {
     .notfound-page {
         width: 1440px;
