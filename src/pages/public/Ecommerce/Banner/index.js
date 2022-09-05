@@ -9,7 +9,7 @@ import Edit from "./component/Edit";
 import FiltersBanner from "./component/FiltersBanner";
 const Banner = () => {
   const rowss = [
-    { sTT: 1, id: 'P001', tenLoai: 'Banner ảnh trang chủ giữa', moTa: 'Nhãn hàng nổi bật', tinhTrang: true },
+    {sTT: 1, id: 'P001', tenLoai: 'Banner ảnh trang chủ giữa', moTa: 'Nhãn hàng nổi bật', tinhTrang: true},
     { sTT: 2, id: 'P002', tenLoai: 'Banner ảnh trang chủ giữa', moTa: 'Nhãn hàng nổi bật', tinhTrang: false },
     { sTT: 3, id: 'P003', tenLoai: 'Banner ảnh trang chủ giữa', moTa: 'Nhãn hàng nổi bật', tinhTrang: true },
     { sTT: 4, id: 'P004', tenLoai: 'Banner ảnh trang chủ giữa', moTa: 'Nhãn hàng nổi bật', tinhTrang: true },
@@ -22,7 +22,11 @@ const Banner = () => {
 
   const columns = [
     { field: 'sTT', headerName: 'Thứ tự', width: 200 },
-    { field: 'id', headerName: 'Mã', width: 250 },
+    {
+      field: 'id', headerName: 'Mã', width: 250,
+      renderCell: (params) => <Link to='/banneritem'>{params.row.id}</Link>
+    },
+
     { field: 'tenLoai', headerName: 'Tên Loại', width: 300 },
     {
       field: 'moTa',
@@ -39,7 +43,7 @@ const Banner = () => {
   ];
   const [selectedRows, setSelectedRows] = useState([]);
   console.log(selectedRows);
-
+  //  data={selectedRows.map(item => item.itemBanner)}
   return (
     <Box>
       <Menu />
@@ -55,13 +59,14 @@ const Banner = () => {
                     <FiltersBanner />
                     <Edit data={selectedRows.map(item => item.id)} />
                     <Delete data={selectedRows.map(item => item.id)} />
+                    {/* <BannerItem /> */}
                   </Box>
                 </Grid>
                 <Grid xs={6} sx={{ display: "flex", justifyContent: "flex-end", height: '40px' }}>
                   {/* <Fab color="background.default" aria-label="add">
                     <AddIcon />
                   </Fab> */}
-                  <Link to='/addbanner'><ColorButton sx={{ width: '150px', fontWeight: "200" }}>Thêm Banner</ColorButton></Link>
+                  <Link to='/addtypebanner'><ColorButton sx={{ width: '200px', fontWeight: "200" }}>Thêm Loại Banner</ColorButton></Link>
                 </Grid>
               </Grid>
             </Box>
@@ -86,9 +91,7 @@ const Banner = () => {
                 {...rowss}
               />
             </Box>
-
-
-            </Box>
+          </Box>
         </Box>
       </Box>
     </Box>

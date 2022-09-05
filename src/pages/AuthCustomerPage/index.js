@@ -11,7 +11,7 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import * as Yup from "yup";
-import { CssTextField } from "../../Theme/store";
+import { TextFieldLogin } from "../../Theme/store";
 import actions from "./actions";
 import "./Login.css";
 
@@ -126,7 +126,7 @@ const Login = () => {
                     noValidate
                     autoComplete="off"
                   >
-                    <CssTextField
+                    <TextFieldLogin
                       {...register("username")}
                       error={errors.username ? true : false}
                       helperText={errors.username && errors.username.message}
@@ -134,7 +134,7 @@ const Login = () => {
                       label="Email / Mã nhân viên"
                       variant="outlined"
                     />
-                    <CssTextField
+                    <TextFieldLogin
                       {...register("password")}
                       error={errors.password ? true : false}
                       helperText={errors.password && errors.password.message}
