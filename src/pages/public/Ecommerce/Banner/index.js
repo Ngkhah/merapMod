@@ -63,9 +63,6 @@ const Banner = () => {
                   </Box>
                 </Grid>
                 <Grid xs={6} sx={{ display: "flex", justifyContent: "flex-end", height: '40px' }}>
-                  {/* <Fab color="background.default" aria-label="add">
-                    <AddIcon />
-                  </Fab> */}
                   <Link to='/addtypebanner'><ColorButton sx={{ width: '200px', fontWeight: "200" }}>Thêm Loại Banner</ColorButton></Link>
                 </Grid>
               </Grid>
@@ -85,7 +82,6 @@ const Banner = () => {
                   const selectedRows = rowss.filter((row) =>
                     selectedIDs.has(row.id),
                   );
-
                   setSelectedRows(selectedRows);
                 }}
                 {...rowss}
