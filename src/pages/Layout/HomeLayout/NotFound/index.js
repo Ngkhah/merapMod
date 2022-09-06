@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
-import { ButtonNotfonud } from "../../../../Theme/store";
+import { ButtonNotfonud } from "../../../../Theme/Button";
 import Menu from "../Header/Menu";
 import GifNotFound from "./GifNotFound";
 import "./NotFound.css";

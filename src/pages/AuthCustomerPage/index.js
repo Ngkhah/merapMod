@@ -9,10 +9,11 @@ import Grid from "@mui/material/Grid";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
-import { Link, useHistory } from "react-router-dom";
+import { Link, Redirect, useHistory } from "react-router-dom";
 import * as Yup from "yup";
-import { TextFieldLogin } from "../../Theme/store";
+import { TextFieldLogin } from "../../Theme/TextField";
 import actions from "./actions";
+import { USER } from "./constants";
 import "./Login.css";
 
 
@@ -46,21 +47,19 @@ const Login = () => {
     dispatch(actions.doLogin(data));
   };
 
-
-
-
-
-
+  if (localStorage.getItem(USER)) {
+    return <Redirect to="/" />
+  }  
   return (
-    <div>
+    <Box>
       {/* {isLoading && <Spiner />}y */}
       <Grid container>
         <Grid item xs={7} className="landing-page">
-          <div className="bg-login">
-            <div className="login-page"></div>
-          </div>
-          <div className="login-motion">
-            <div className="motion">
+          <Box className="bg-login">
+            <Box className="login-page"></Box>
+          </Box>
+          <Box className="login-motion">
+            <Box className="motion">
               <img
                 className="login-motion_item"
                 src="./img/motion/1.png"
@@ -81,11 +80,11 @@ const Login = () => {
                 src="./img/motion/4.png"
                 alt=""
               />
-            </div>
-          </div>
+            </Box>
+          </Box>
         </Grid>
         <Grid item xs={5}>
-          <div
+          <Box
             className="form-login"
             style={{
               width: "100%",
@@ -94,8 +93,8 @@ const Login = () => {
               justifyContent: "center",
             }}
           >
-            <div style={{ width: "70%", margin: "auto" }}>
-              <div
+            <Box style={{ width: "70%", margin: "auto" }}>
+              <Box
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -107,7 +106,7 @@ const Login = () => {
                   alt=""
                   style={{ width: "150px", marginBottom: "3rem" }}
                 />
-              </div>
+              </Box>
               <h1
                 style={{
                   marginLeft: "8px",
@@ -130,7 +129,6 @@ const Login = () => {
                       {...register("username")}
                       error={errors.username ? true : false}
                       helperText={errors.username && errors.username.message}
-                      id="outlined-basic"
                       label="Email / Mã nhân viên"
                       variant="outlined"
                     />
@@ -138,9 +136,11 @@ const Login = () => {
                       {...register("password")}
                       error={errors.password ? true : false}
                       helperText={errors.password && errors.password.message}
-                      id="outlined-basic"
                       label="Mật khẩu"
                       variant="outlined"
+                      autoComplete="true"
+                      name='password'
+                      required={true}
                       type='password'
                     />
                     <Grid container>
@@ -159,7 +159,7 @@ const Login = () => {
                           justifyContent: "flex-end",
                         }}
                       >
-                        <Link
+                        <Link to='/reset-password'
                           style={{
                             cursor: "pointer",
                             textDecoration: "none",
@@ -185,13 +185,13 @@ const Login = () => {
                     </Button>
                   </Box>
                 </FormGroup>
-                      
+
               </form>
-            </div>
-          </div>
+            </Box>
+          </Box>
         </Grid>
       </Grid>
-    </div>
+    </Box>
   );
 };
 

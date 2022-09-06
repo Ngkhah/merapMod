@@ -8,7 +8,7 @@ const ProfilePage = () => {
   return (
     <Box>
       <Menu />
-      <Box sx={{mt:"2rem"}} className="profile-page">
+      <Box className="profile-page">
         <Box className="profile">
           <Box className="profile-cover">
             <img src="./img/cover2.jpg" alt="" />

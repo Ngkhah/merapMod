@@ -1,6 +1,7 @@
 export const USER_LOGIN_START = `USER_LOGIN_START`;
 export const USER_LOGIN_SUCCESS = `USER_LOGIN_SUCCESS`;
 export const USER_LOGIN_ERROR = `USER_LOGIN_ERROR`;
+export const USER = `asauth`;
 
 
 export const USER_RESET_START = `USER_RESET_START`;

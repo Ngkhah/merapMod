@@ -2,30 +2,30 @@ import { Grid, Modal, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import React, { useState } from 'react'
 import { FiEdit } from 'react-icons/fi'
-import { ButtonWhite, ColorButton, CssTextField } from '../../../../../Theme/store'
+import { ButtonWhite, ColorButton } from '../../../../../Theme/Button'
+import { CssTextField } from '../../../../../Theme/TextField'
 
 const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 800,
-    bgcolor: 'background.paper',
-    boxShadow: 24,
-    p: 4,
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 800,
+  bgcolor: 'background.paper',
+  boxShadow: 24,
+  p: 4,
 };
 
-const Edit = ({data}) => {
+const Edit = ({ data }) => {
 
-    const [open, setOpen] = useState(false);
-    const handleOpen = () => setOpen(true);
-    const handleClose = () => setOpen(false);
-    console.log(data);
-    return (
-        <div>
-            <ButtonWhite onClick={handleOpen} sx={{ height: "40px", width: "30px", fontSize: '18px', ml: 2 }}><FiEdit /></ButtonWhite>
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+  return (
+    <div>
+      <ButtonWhite onClick={handleOpen} sx={{ height: "40px", width: "30px", fontSize: '18px', ml: 2 }}><FiEdit /></ButtonWhite>
 
-            <Modal
+      <Modal
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
@@ -62,41 +62,41 @@ const Edit = ({data}) => {
                 tác.
 
                 <Box sx={{ flexGrow: 1, p: 0 }}>
-                                <Grid container spacing={1} sx={{ my: "1rem" }}>
-                                    <Grid item xs={12}>
-                                        <CssTextField
-                                            label="Tên loại"
-                                            variant="outlined"
-                                            defaultValue={data}
-                                            sx={{ width: "100%", mt:2 }}
-                                        />
-                                    </Grid>
-                                    <Grid item xs={12}>
-                                        <CssTextField
-                                            label="Mô tả"
-                                            variant="outlined"
-                                            defaultValue="Giải phóng hàng tồn"
-                                            sx={{ width: "100%", mt:2 }}
-                                        />
-                                    </Grid>
-                                    <Grid item xs={6}>
-                                        <CssTextField
-                                            label="Chiều dài đề xuất"
-                                            variant="outlined"
-                                            defaultValue="Chiều dài đề xuất"
-                                            sx={{ width: "100%", mt:2 }}
-                                        />
-                                    </Grid>
-                                    <Grid item xs={6}>
-                                        <CssTextField
-                                            label="Chiều cao đề xuất"
-                                            variant="outlined"
-                                            defaultValue="Chiều cao đề xuất"
-                                            sx={{ width: "100%", mt:2 }}
-                                        />
-                                    </Grid>
-                                </Grid>
-                            </Box>
+                  <Grid container spacing={1} sx={{ my: "1rem" }}>
+                    <Grid item xs={12}>
+                      <CssTextField
+                        label="Tên loại"
+                        variant="outlined"
+                        defaultValue={data}
+                        sx={{ width: "100%", mt: 2 }}
+                      />
+                    </Grid>
+                    <Grid item xs={12}>
+                      <CssTextField
+                        label="Mô tả"
+                        variant="outlined"
+                        defaultValue="Giải phóng hàng tồn"
+                        sx={{ width: "100%", mt: 2 }}
+                      />
+                    </Grid>
+                    <Grid item xs={6}>
+                      <CssTextField
+                        label="Chiều dài đề xuất"
+                        variant="outlined"
+                        defaultValue="Chiều dài đề xuất"
+                        sx={{ width: "100%", mt: 2 }}
+                      />
+                    </Grid>
+                    <Grid item xs={6}>
+                      <CssTextField
+                        label="Chiều cao đề xuất"
+                        variant="outlined"
+                        defaultValue="Chiều cao đề xuất"
+                        sx={{ width: "100%", mt: 2 }}
+                      />
+                    </Grid>
+                  </Grid>
+                </Box>
               </Typography>
               <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
                 <ButtonWhite
@@ -116,9 +116,9 @@ const Edit = ({data}) => {
           )}
         </Box>
       </Modal>
-        </div>
+    </div>
 
-    )
+  )
 }
 
 export default Edit

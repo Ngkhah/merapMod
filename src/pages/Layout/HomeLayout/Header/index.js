@@ -2,6 +2,7 @@ import { Box, IconButton } from '@mui/material';
 import React, { useContext } from 'react'
 import { MdBrightness4, MdBrightness5 } from 'react-icons/md';
 import { Link } from 'react-router-dom';
+import Images from '../../../../constans/Img';
 import { ColorModeContext } from '../../../../Theme/store';
 import "./Home.css"
 
@@ -22,14 +23,14 @@ const Header = () => {
       <Box className='menu-home_group'>
         <Box className='menu-home_logo'>
         {mode === "dark" ? (
-              <Link to='/'><img id='home-logo' src="./img/logo2.png" alt="" /></Link>
+            <Link to='/'><img id='home-logo' src={Images.BG1} alt="" /></Link>
             ) : (
-              <Link to='/'><img id='home-logo' src="./img/logo.png" alt="" /></Link>
+              <Link to='/'><img id='home-logo' src={Images.BG2}  alt="" /></Link>
             )}
           
         </Box>
         <Box className='menu-home_icons'>
-          <Link to='/' className='logo-bell'><img src="./img/bell.png" alt="./img/bell.png" /></Link>
+          <Link to='/' className='logo-bell'><img src={Images.BG3}  alt="./img/bell.png" /></Link>
           <IconButton
             sx={{ ml: 1 }}
             onClick={toggleMode}
@@ -40,9 +41,9 @@ const Header = () => {
               <MdBrightness5 />
             )}
           </IconButton>
-          <Link to='/notfound' className='logo-search'><img src="./img/search.png" alt="./img/search.png" /></Link>
-          <Link to='/profile' className='logo-avatar'> <img src="./img/avatar.png" alt="./img/avatar.pn" /></Link>
-          <Link to='/home' className='logo-bot'><img src="./img/bot.png" alt="./img/bot.png" /></Link>
+          <Link to='/not-found' className='logo-search'><img src={Images.BG4}  alt="./img/search.png" /></Link>
+          <Link to='/profile' className='logo-avatar'> <img src={Images.BG5}  alt="./img/avatar.pn" /></Link>
+          <Link to='/home' className='logo-bot'><img src={Images.BG6}  alt="./img/bot.png" /></Link>
         </Box>
       </Box>
     </Box>

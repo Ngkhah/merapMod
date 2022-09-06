@@ -16,7 +16,7 @@ const homeRoutes = [
     component: import('./public/HomePage')
   },
   {
-    path: '/notfound',
+    path: '/not-found',
     name: 'NotFound',
     exact: true,
     component: import('./Layout/HomeLayout/NotFound')
@@ -28,19 +28,19 @@ const homeRoutes = [
     component: import('./public/Ecommerce/Banner')
   }, 
   {
-    path: '/banneritem',
+    path: '/banner-item/:id',
     name: 'BannerItem',
     exact: true,
     component: import('./public/Ecommerce/Banner/component/Banner')
   },
   {
-    path: '/addbanner',
+    path: '/add-banner',
     name: 'Add Banner',
     exact: true,
     component: import('./public/Ecommerce/Banner/component/AddBanner')
   },
   {
-    path: '/addtypebanner',
+    path: '/add-type-banner',
     name: 'Add Type Banner',
     exact: true,
     component: import('./public/Ecommerce/Banner/component/AddTypeBanner')
@@ -52,17 +52,17 @@ const homeRoutes = [
     component: import('./public/ProfilePage')
   },
   {
-    path: '/sitemap',
+    path: '/site-map',
     name: 'Site Map',
     exact: true,
     component: import('./Layout/HomeLayout/SiteMap')
   },
-  // {
-  //   path: '/:somestring',
-  //   name: 'NotFound',
-  //   exact: true,
-  //   component: import('./Layout/HomeLayout/NotFound')
-  // }, 
+  {
+    path: '/:somestring',
+    name: 'NotFound',
+    exact: true,
+    component: import('./Layout/HomeLayout/NotFound')
+  }, 
 ];
 
 const allRoutes = {

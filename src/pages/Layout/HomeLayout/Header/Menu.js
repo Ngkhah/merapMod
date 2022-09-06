@@ -1,4 +1,4 @@
-import { Container, ListItem, ListItemText, Typography } from "@mui/material";
+import { Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import { AiOutlinePicCenter } from "react-icons/ai";
@@ -9,15 +9,13 @@ import { HiQrcode } from "react-icons/hi";
 import { RiHome2Line } from "react-icons/ri";
 import { TiShoppingCart } from "react-icons/ti";
 import { VscServerProcess } from "react-icons/vsc";
-
 import { Link } from "react-router-dom";
 import Header from ".";
-import {
-  ButtonWhite1,
-  ButtonWhite2,
-  LightTooltip,
-  ListMenu
-} from "../../../../Theme/store";
+import { ButtonWhite1, ButtonWhite2 } from "../../../../Theme/Button";
+import { LightTooltip } from "../../../../Theme/Tooltip";
+import { ListMenu } from "../../../../Theme/ListMenu";
+import { Fragment } from "react";
+import { useState } from "react";
 
 const style = {
   position: "fixed",
@@ -37,10 +35,10 @@ const styleList = {
 };
 
 const styleContainer = {
-  minWidth: "1440px",
   display: "flex",
   height: "60px",
   alignItems: "center",
+  margin: "0 3rem"
 };
 const icons = {
   pr: "10px",
@@ -129,11 +127,49 @@ const EcommerceMenu = (
 );
 
 const Menu = () => {
+
+  const [state, setState] = useState({
+    left: false
+  });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+    setState({ ...state, [anchor]: open });
+  };
+
+  const list = (anchor) => (
+    <Box
+      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List sx={{width:'100%'}}>
+        {["Ecommecer", "Banner", "Item Banner"].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <HiQrcode /> : <RiHome2Line />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+    </Box>
+  );
+
   return (
     <Box sx={{ pt: "124px" }}>
       <Header />
       <Box sx={style}>
-        <Container sx={styleContainer} style={{}}>
+        <Box sx={styleContainer}>
           <LightTooltip title={DashboardMenu} color="palette.text.primary" placement="bottom-start">
             <Link to="/">
               <ButtonWhite2 sx={{ width: "200px", height: "40px", mr: "1rem" }}>
@@ -147,8 +183,9 @@ const Menu = () => {
               </ButtonWhite2>
             </Link>
           </LightTooltip>
-          <LightTooltip title={EcommerceMenu}  placement="bottom-start">
-            <Link to="/sitemap">
+
+          <LightTooltip title={EcommerceMenu} placement="bottom-start">
+            <Link to="/site-map">
               <ButtonWhite1 sx={{ width: "150px", height: "40px", mr: "1rem" }}>
                 <Typography sx={icons}>
                   <TiShoppingCart />
@@ -157,15 +194,24 @@ const Menu = () => {
               </ButtonWhite1>
             </Link>
           </LightTooltip>
-          <Link to="/">
-            <ButtonWhite1 sx={{ width: "100px", height: "40px", mr: "1rem" }}>
-              <Typography sx={icons}>
-                <FaEllipsisH />
-              </Typography>
-              Khác
-            </ButtonWhite1>
-          </Link>
-        </Container>
+          {["left"].map((anchor) => (
+            <Fragment key={anchor}>
+              <ButtonWhite1 onClick={toggleDrawer(anchor, true)} sx={{ width: "100px", height: "40px", mr: "1rem" }}>
+                <Typography sx={icons}>
+                  <FaEllipsisH />
+                </Typography>
+                Khác
+              </ButtonWhite1>
+              <Drawer
+                anchor={anchor}
+                open={state[anchor]}
+                onClose={toggleDrawer(anchor, false)}
+              >
+                {list(anchor)}
+              </Drawer>
+            </Fragment>
+          ))}
+        </Box>
       </Box>
     </Box>
   );

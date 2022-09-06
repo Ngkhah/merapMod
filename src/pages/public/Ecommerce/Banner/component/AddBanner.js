@@ -2,14 +2,12 @@ import { Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  ColorButton,
-  CssTextField,
-  SwitchTable,
-  TextArea,
-} from "../../../../../Theme/store";
+import { ColorButton } from "../../../../../Theme/Button";
+import { CssTextField, TextArea } from "../../../../../Theme/TextField";
+import { SwitchTable } from "../../../../../Theme/Switch";
 import Menu from "../../../../Layout/HomeLayout/Header/Menu";
 import CkeditorBanner from "./CkeditorBanner";
+
 
 const AddBanner = () => {
   const BoxImg = {
@@ -30,15 +28,15 @@ const AddBanner = () => {
     <Box>
       <Menu />
       <form>
-        <Box sx={{ mt: 2 }}>
-          <Box sx={{ maxWidth: "1440px", margin: "0 auto" }}>
+        <Box sx={{ m: '3rem 0' }}>
+          <Box sx={{ maxWidth: "95%", margin: "0 auto" }}>
             <Box sx={{ margin: "1rem" }}>
               <Typography
                 sx={{ fontWeight: 700, mt: "2rem", mb: "2rem" }}
                 variant="h5"
                 color="palette.text.primary"
               >
-                Thêm mới danh sách Banner mới
+                Thêm mới Banner
               </Typography>
               <Box sx={{ bgcolor: "background.paper", p: 4 }}>
                 <Box sx={{ flexGrow: 1, p: 0 }}>
@@ -87,7 +85,7 @@ const AddBanner = () => {
                         <Box sx={{ textAlign: "center", m: "auto" }}>
                           <img src="./img/addImg.png" alt="" />
                           <Typography sx={{ fontWeight: 500 }}>
-                            Kéo thả hình ảnh vào đây hoặc <Link>tải lên</Link>
+                            Kéo thả hình ảnh vào đây hoặc <Link to='/banner'>tải lên</Link>
                           </Typography>
                           <Typography
                             sx={{ fontWeight: 500, color: "#8C9CB6" }}

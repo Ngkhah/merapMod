@@ -13,12 +13,8 @@ import PropTypes from "prop-types";
 import React, { useState } from "react";
 import { FiFilter } from "react-icons/fi";
 import { VscClose } from "react-icons/vsc";
-
-import {
-  ButtonLine,
-  ColorButton,
-  CssTextField,
-} from "../../../../../Theme/store";
+import { ColorButton, ButtonLine } from "../../../../../Theme/Button";
+import { CssTextField } from "../../../../../Theme/TextField";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
@@ -84,8 +80,7 @@ const FiltersBanner = (data) => {
         aria-labelledby="customized-dialog-title"
         open={open}
         maxWidth="lg"
-        fullWidth="lg"
-        
+
       >
         <BootstrapDialogTitle
           id="customized-dialog-title"
@@ -95,7 +90,7 @@ const FiltersBanner = (data) => {
         </BootstrapDialogTitle>
         <DialogContent sx={{ p: 0, borderRadius: 0 }}>
           <Box sx={{ flexGrow: 1, p: 0 }}>
-            <Grid container spacing={2} sx={{ my: "1rem", px:'5rem' }} >
+            <Grid container spacing={2} sx={{ my: "1rem", px: '5rem' }} >
               <Grid item xs={6}>
                 <CssTextField
                   label="Mã"
@@ -125,7 +120,7 @@ const FiltersBanner = (data) => {
                   label="Tình trạng"
                   variant="outlined"
                   placeholder="Tình trạng"
-                  sx={{ width: "100%"}}
+                  sx={{ width: "100%" }}
                 />
               </Grid>
             </Grid>
@@ -133,7 +128,7 @@ const FiltersBanner = (data) => {
         </DialogContent>
         <DialogActions>
           <ColorButton
-            sx={{ height: "40px", width: "300px" , mb:'1rem', mr:'1rem'}}
+            sx={{ height: "40px", width: "300px", mb: '1rem', mr: '1rem' }}
             onClick={handleClose}
           >
             Áp dụng

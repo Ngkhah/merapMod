@@ -1,8 +1,8 @@
-import { Grid, Modal, Typography } from "@mui/material";
+import { Modal, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import { ButtonWhite, ColorButton } from "../../../../../Theme/store";
+import { ButtonWhite, ColorButton } from "../../../../../Theme/Button";
 
 const style = {
   position: "absolute",

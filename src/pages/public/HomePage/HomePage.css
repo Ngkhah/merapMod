@@ -17,7 +17,7 @@
 
 @media only screen and (min-width: 1920px) {
     .homepage-responsive {
-        max-width: 1440px;
+        max-width: 95%;
         margin: 0 auto;
     }
 }

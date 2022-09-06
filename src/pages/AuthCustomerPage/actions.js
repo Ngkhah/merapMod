@@ -1,60 +1,62 @@
 import * as constants from './constants';
 import * as services from './service';
 // import Errors from "./../shared/error/errors";
-import {getHistory} from '../configureStore';
+import { getHistory } from '../configureStore';
+import Swal from 'sweetalert2';
 // import { successSwal } from '../../utils/swalUtils';
 
 
 const actions = {
   doLogin: (data) => async (dispatch) => { // đăng nhập
     try {
-      dispatch({ type: constants.USER_LOGIN_START});
+      dispatch({ type: constants.USER_LOGIN_START });
       const response = await services.login(data);
 
-      const { token, user,customer } = response.data;
+      const { token, user, customer } = response.data;
 
       window.localStorage.setItem(
         "asauth",
-        JSON.stringify({token,user})
+        JSON.stringify({ token, user })
       );
 
       getHistory().push('/');
 
-      dispatch({ 
+      dispatch({
         type: constants.USER_LOGIN_SUCCESS,
         payload: {
           user,
           customer
         }
       });
-
-      
     } catch (error) {
-      // dispatch({ 
-      //   type: constants.USER_LOGIN_ERROR
-      // });
-      // Errors.handle(error);
-      console.log(error,'login ko thanh cong');
+      dispatch({
+        type: constants.USER_LOGIN_ERROR
+      });
+      // console.log(error.response.data);
+      Swal.fire({
+        icon: 'error',
+        title: error.response.data.message,
+      })
     }
   },
 
   doGetUserInfo: () => async (dispatch) => { // laays thoong tin user
     try {
-    dispatch({ type: constants.USER_GET_START});
+      dispatch({ type: constants.USER_GET_START });
       const response = await services.getUser();
 
-      const { user,customer } = response.data;
+      const { user, customer } = response.data;
 
-      dispatch({ 
+      dispatch({
         type: constants.USER_GET_SUCCESS,
         payload: {
           user,
           customer
         }
       });
-      
+
     } catch (error) {
-      dispatch({ 
+      dispatch({
         type: constants.USER_GET_ERROR
       });
       // Errors.handle(error);
@@ -76,7 +78,7 @@ const actions = {
   //     getHistory().push('/');
 
   //     dispatch({ type: constants.USER_LOGIN_KEY_SUCCESS});
-      
+
   //   } catch (error) {
   //     dispatch({ 
   //       type: constants.USER_LOGIN_KEY_ERROR
@@ -110,7 +112,7 @@ const actions = {
   //       'Thông báo', 
   //       'Cập nhật thông tin thành công', 
   //     () => {
-        
+
   //     });
 
   //     dispatch({ 
@@ -133,7 +135,7 @@ const actions = {
   //       'Thông báo', 
   //       'Cập nhật thông tin thành công', 
   //     () => {
-        
+
   //     });
 
   //     dispatch({ 
@@ -160,7 +162,7 @@ const actions = {
   //       getHistory().push('/login');
   //     });
 
-      
+
 
   //   } catch (error) {
   //     dispatch({ type: constants.USER_CHANGE_PASS_ERROR});

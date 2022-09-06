@@ -72,6 +72,10 @@ li a.multi:after {
     background-color: white;
     z-index: 1;
 }
+li a{
+    display: flex;
+    align-items: center;
+}
 
 
 
@@ -114,6 +118,10 @@ li {
     margin-right: 20px;
     white-space: normal;
     width: 100%;
+
+}
+.primary ul ul li a{
+    font-weight: 700;
 }
 
 .primary ul ul li:last-child {
@@ -142,7 +150,6 @@ li {
     border-bottom: 1.5px solid #E2EBEA;
     border-right: 1.5px solid #E2EBEA;
     transition: all 0.2s;
-
 }
 
 .primary ul ul li a:hover {
@@ -185,6 +192,12 @@ li {
     top: 50px;
     left: 15px;
     width: 15px;
+}
+
+.primary ul ul ul li a,
+.primary ul ul ul li a.multi:after {
+    font-weight: 400;
+    text-transform: capitalize
 }
 
 /* --- Widths --- */
