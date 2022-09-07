@@ -1,6 +1,7 @@
 import { styled, TextField } from "@mui/material";
 
 export const TextFieldLogin = styled(TextField)({
+
     "& label.Mui-focused": {
         color: "#52627C"
     },
@@ -8,14 +9,17 @@ export const TextFieldLogin = styled(TextField)({
         borderBottomColor: "#00A79D"
     },
     "& .MuiOutlinedInput-root": {
+        borderRadius: "10px",
+
         "& fieldset": {
             borderColor: "#D9D9D9"
+            , color: "#52627C",
         },
         "&:hover fieldset": {
             borderColor: "#D9D9D9"
         },
         "&.Mui-focused fieldset": {
-            borderColor: "#52627C"
+            borderColor: "#D9D9D9"
         }
     }
 });
@@ -38,14 +42,16 @@ export const TextArea = styled(TextField)({
         borderBottomColor: "#00A79D"
     },
     "& .MuiOutlinedInput-root": {
+        borderRadius: "10px",
+
         "& fieldset": {
-            borderColor: "#D9D9D9"
+            borderColor: "#D9D9D9", color: "#52627C",
         },
         "&:hover fieldset": {
             borderColor: "#D9D9D9"
         },
         "&.Mui-focused fieldset": {
-            borderColor: "#52627C"
+            borderColor: "#D9D9D9"
         }
     }
 });
@@ -54,13 +60,18 @@ export const TextArea = styled(TextField)({
 export const CssTextField = styled((props) => (
     <TextField InputLabelProps={{ shrink: true }} {...props} />
 ))(({ theme }) => ({
+    "& label": {
+        color: "#52627C"
+    },
     "& label.Mui-focused": {
         color: "#52627C"
     },
     "& .MuiInput-underline:after": {
         borderBottomColor: "#00A79D"
     },
+
     "& .MuiOutlinedInput-root": {
+        borderRadius: "10px",
         "& fieldset": {
             borderColor: "#D9D9D9"
         },
@@ -68,7 +79,8 @@ export const CssTextField = styled((props) => (
             borderColor: "#D9D9D9"
         },
         "&.Mui-focused fieldset": {
-            borderColor: "#52627C"
-        }
+            borderColor: "#D9D9D9"
+        },
+
     }
 }));

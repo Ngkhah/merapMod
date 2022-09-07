@@ -1,11 +1,25 @@
-import { Grid, Typography } from "@mui/material";
-import { Box } from "@mui/system";
+import {
+  Box,
+  FormControl,
+  Grid,
+  InputLabel,
+  MenuItem,
+  Select,
+  Typography,
+} from "@mui/material";
 import React from "react";
-import { CssTextField } from "../../../../../Theme/TextField";
 import { ColorButton } from "../../../../../Theme/Button";
+import { CustomSelect } from "../../../../../Theme/Select";
+import { SwitchTable } from "../../../../../Theme/Switch";
+import { CssTextField } from "../../../../../Theme/TextField";
 import Menu from "../../../../Layout/HomeLayout/Header/Menu";
 
-const AddTypeBanner = () => {
+const AddCategory = () => {
+  const [age, setAge] = React.useState("");
+
+  const handleChange = (event) => {
+    setAge(event.target.value);
+  };
   return (
     <Box>
       <Menu />
@@ -17,47 +31,52 @@ const AddTypeBanner = () => {
               variant="h5"
               color="palette.text.primary"
             >
-              Thêm mới loại Banner
+              Thêm mới danh mục
             </Typography>
             <form>
-              <Box sx={{ bgcolor: "background.paper", p: 4 }}>
+              <Box sx={{ bgcolor: "background.paper", p: 4, my: "1rem" }}>
                 <Box sx={{ flexGrow: 1, p: 0 }}>
-                  <Grid container spacing={1} sx={{ my: "1rem" }}>
-                    <Grid item xs={12}>
+                  <Typography
+                    sx={{ fontWeight: 700, fontSize: "17px" }}
+                    color="palette.text.primary"
+                  >
+                    Tình trạng <SwitchTable />
+                  </Typography>
+                  <Grid container spacing={1} sx={{}}>
+                    <Grid item xs={6}>
                       <CssTextField
-                        label="Tên loại"
+                        label="Tên danh mục"
                         variant="outlined"
-                        placeholder="Tên loại"
-                        sx={{ width: "100%", mt: 2 }}
-                      />
-                    </Grid>
-                    <Grid item xs={12}>
-                      <CssTextField
-                        label="Mô tả"
-                        variant="outlined"
-                        placeholder="Giải phóng hàng tồn"
+                        placeholder="Tên danh mục"
                         sx={{ width: "100%", mt: 2 }}
                       />
                     </Grid>
                     <Grid item xs={6}>
                       <CssTextField
-                        label="Chiều dài đề xuất"
+                        label="Slug URL(Viết thường không dấu)"
                         variant="outlined"
-                        placeholder="Chiều dài đề xuất"
+                        placeholder="Slug URL"
                         sx={{ width: "100%", mt: 2 }}
                       />
                     </Grid>
                     <Grid item xs={6}>
+                      <Box sx={{ width: "100%", mt: 2 }}>
+                        {/* /sdfsdflkdhflkdhfkjdhff */}
+                      </Box>
+                    </Grid>
+                    <Grid item xs={6}>
                       <CssTextField
-                        label="Chiều cao đề xuất"
+                        label="Biểu tượng"
                         variant="outlined"
-                        placeholder="Chiều cao đề xuất"
+                        placeholder="Biểu tượng"
                         sx={{ width: "100%", mt: 2 }}
                       />
                     </Grid>
                   </Grid>
                   <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
-                    <ColorButton sx={{ width: "200px", height: "40px" }}>
+                    <ColorButton
+                      sx={{ width: "200px", height: "40px", mt: "1rem" }}
+                    >
                       Lưu
                     </ColorButton>
                   </Box>
@@ -71,4 +90,4 @@ const AddTypeBanner = () => {
   );
 };
 
-export default AddTypeBanner;
+export default AddCategory;

@@ -2,7 +2,7 @@ import { Grid, Modal, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import React, { useState } from 'react'
 import { FiEdit } from 'react-icons/fi'
-import { ButtonWhite, ColorButton } from '../../../../../Theme/Button'
+import { ButtonWhite, ButtonWhite2, ColorButton } from '../../../../../Theme/Button'
 import { CssTextField } from '../../../../../Theme/TextField'
 
 const style = {
@@ -23,7 +23,7 @@ const Edit = ({ data }) => {
   const handleClose = () => setOpen(false);
   return (
     <div>
-      <ButtonWhite onClick={handleOpen} sx={{ height: "40px", width: "30px", fontSize: '18px', ml: 2 }}><FiEdit /></ButtonWhite>
+      <ButtonWhite2 onClick={handleOpen} sx={{ height: "40px", width: "30px", fontSize: '18px', ml: 2 }}><FiEdit /></ButtonWhite2>
 
       <Modal
         open={open}

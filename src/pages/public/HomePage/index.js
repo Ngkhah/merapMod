@@ -6,7 +6,12 @@ import Header from "../../Layout/HomeLayout/Header";
 import "./HomePage.css";
 
 const HomePage = () => {
-
+  const iconApp = {
+    bgcolor: "background.btn", 
+    width:"95%",
+    height: '430px',
+ 
+  }
   return (
     <Box>
       <Header />
@@ -15,7 +20,7 @@ const HomePage = () => {
           <Grid container style={{ margin: "1rem 0" }}  >
             <Grid item xs={3} >
               <Link to="/not-found" style={{ textDecoration: "none" }}>
-                <Box sx={{ bgcolor: "background.btn" }} className="dashboard-item">
+                <Box sx={ iconApp } className="dashboard-item">
                   <Box className="title-app">
                     <img src="./img/icon 1.png" alt="" />
                     <Typography sx={{textAlign: "center", mt:3}} color="palette.text.primary" variant="h6">
@@ -27,7 +32,7 @@ const HomePage = () => {
             </Grid>
             <Grid item xs={3}>
               <Link to="/banner" style={{ textDecoration: "none" }}>
-                <Box sx={{ bgcolor: "background.btn" }} className="dashboard-item">
+                <Box sx={iconApp} className="dashboard-item">
                   <Box className="title-app">
                     <img src="./img/icon 4.png" alt="" />
                     <Typography sx={{textAlign: "center", mt:3}} color="palette.text.primary" variant="h6">
@@ -39,7 +44,7 @@ const HomePage = () => {
             </Grid>
             <Grid item xs={3}>
               <Link to="/not-found" style={{ textDecoration: "none" }}>
-                <Box sx={{ bgcolor: "background.btn" }} className="dashboard-item">
+                <Box sx={iconApp} className="dashboard-item">
                   <Box className="title-app">
                     <img src="./img/icon 3.png" alt="" />
                     <Typography sx={{textAlign: "center", mt:3}} color="palette.text.primary" variant="h6">
@@ -51,7 +56,7 @@ const HomePage = () => {
             </Grid>
             <Grid item xs={3}>
               <Link to="/site-map" style={{ textDecoration: "none" }}>
-                <Box sx={{ bgcolor: "background.btn" }} className="dashboard-item">
+                <Box sx={iconApp} className="dashboard-item">
                   <Box className="title-app">
                     <img src="./img/icon 2.png" alt="" />
                     <Typography sx={{textAlign: "center", mt:3}} color="palette.text.primary" variant="h6">

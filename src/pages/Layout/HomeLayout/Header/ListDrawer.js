@@ -5,15 +5,16 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
-  ListSubheader,
+  ListSubheader
 } from "@mui/material";
 import React from "react";
 import {
   AiOutlinePicCenter,
   AiOutlinePicRight,
-  AiOutlinePicture,
+  AiOutlinePicture
 } from "react-icons/ai";
 import { HiQrcode } from "react-icons/hi";
+import { RiLayoutLeftLine,RiBillLine } from "react-icons/ri";
 import { TiShoppingCart } from "react-icons/ti";
 import { Link } from "react-router-dom";
 import Images from "../../../../constans/Img";
@@ -44,7 +45,6 @@ const ListDrawer = () => {
       }
     >
       <Divider />
-
       <ListItemButton>
         <ListItemIcon>
           <TiShoppingCart style={{ fontSize: "20px" }} />
@@ -57,7 +57,7 @@ const ListDrawer = () => {
             <ListItemIcon>
               <AiOutlinePicCenter style={{ fontSize: "20px" }} />
             </ListItemIcon>
-            <ListItemText color="palette.text.primary" primary="Banner" />
+            <ListItemText color="palette.text.primary" primary="Quản lý Banner" />
           </ListItemButton>
         </Link>
         <List component="div" disablePadding>
@@ -77,6 +77,26 @@ const ListDrawer = () => {
                 <AiOutlinePicture style={{ fontSize: "20px" }} />
               </ListItemIcon>
               <ListItemText primary="Add Banner" />
+            </ListItemButton>
+          </Link>
+        </List>
+      </List>
+      <List component="div" disablePadding>
+        <Link to="/category" style={{ textDecoration: "none" }}>
+          <ListItemButton sx={{ pl: 4 }}>
+            <ListItemIcon>
+              <RiLayoutLeftLine style={{ fontSize: "20px" }} />
+            </ListItemIcon>
+            <ListItemText color="palette.text.primary" primary="Quản lý Danh Mục" />
+          </ListItemButton>
+        </Link>
+        <List component="div" disablePadding>
+          <Link to="/add-category">
+            <ListItemButton sx={{ pl: 6 }}>
+              <ListItemIcon>
+                <RiBillLine style={{ fontSize: "20px" }} />
+              </ListItemIcon>
+              <ListItemText primary="Thêm danh mục" />
             </ListItemButton>
           </Link>
         </List>

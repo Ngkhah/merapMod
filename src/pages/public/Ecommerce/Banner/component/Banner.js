@@ -4,7 +4,6 @@ import { Link, useParams } from 'react-router-dom';
 import { ColorButton } from '../../../../../Theme/Button';
 import { StyledDataGrid } from '../../../../../Theme/DataGrid';
 import { SwitchTable } from '../../../../../Theme/Switch';
-import { ZoomImgTooltip } from '../../../../../Theme/Tooltip';
 import Menu from '../../../../Layout/HomeLayout/Header/Menu';
 import Delete from './Delete';
 import Edit from './Edit';
@@ -25,26 +24,25 @@ const BannerItem = () => {
         { sTT: 9, id: 'P009', img: 'https://picsum.photos/id/19/480/160', tenLoai: 'Banner ảnh trang chủ giữa', moTa: 'Khuyến mãi - Giỏ hàng XOS', batDau: "30/08/2022", ketThuc: "05/09/2022", tinhTrang: true },
     ];
     const columns = [
-        { field: 'sTT', headerName: 'Thứ tự', width: 150 },
+        { field: 'sTT', headerName: 'Thứ tự', flex: 0.5 },
         {
-            field: 'img', headerName: 'Banner', width: 300,
-            renderCell: (params) => <ZoomImgTooltip title={<img style={{ width: "100%", height: "100%" }} src={params.row.img} alt={params.row.img} />}>
-                <img style={{ width: "120px", height: "40px" }} src={params.row.img} alt={params.row.img} />
-            </ZoomImgTooltip>
+            field: 'img', headerName: 'Banner', flex: 1.5,
+            renderCell: (params) => <img style={{ width: "120px", height: "40px" }} src={params.row.img} alt={params.row.img} />
+
         },
-        { field: 'tenLoai', headerName: 'Loại Banner', width: 300 },
+        { field: 'tenLoai', headerName: 'Loại Banner', flex: 1 },
         {
             field: 'moTa',
             headerName: 'Tiêu Đề',
-            width: 300,
+            flex: 1
         },
-        { field: 'batDau', headerName: 'Từ Ngày', width: 200 },
-        { field: 'ketThuc', headerName: 'Đến Ngày', width: 200 },
+        { field: 'batDau', headerName: 'Từ Ngày', flex: 1 },
+        { field: 'ketThuc', headerName: 'Đến Ngày', flex: 1 },
 
         {
             field: 'tinhTrang',
             headerName: 'Tình Trạng',
-            width: 244,
+            flex: 0.5,
             renderCell: (params) => <SwitchTable checked={params.row.tinhTrang} />
 
         },
@@ -74,19 +72,20 @@ const BannerItem = () => {
                             </Grid>
                         </Box>
 
-                        <Box className="focus" sx={{ height: 500 }}>
+                        <Box className="focus" sx={{ height: '600px' }}>
                             <StyledDataGrid
                                 color="default"
                                 rows={rowss}
+                                count={rowss.length}
                                 columns={columns}
                                 pageSize={7}
                                 rowsPerPageOptions={[7]}
                                 checkboxSelection
-                                SelectProps={{
-                                    inputProps: {
-                                        "aria-label": "Rows per page"
+                                localeText={{
+                                    MuiTablePagination: {
+                                        labelDisplayedRows: ({ from, to, count }) =>
+                                            `Đang xem : ${from}-${to} của ${count !== -1 ? count : `${to}`}`,
                                     },
-                                    native: true
                                 }}
                                 sx={{ width: '100%', bgcolor: 'background.paper', border: 0, pt: '1rem', px: '2rem' }}
                                 onSelectionModelChange={(id) => {

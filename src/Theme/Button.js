@@ -13,13 +13,14 @@ export const ColorButton = styled(Button)(({ theme }) => ({
 export const ButtonLine = styled(Button)(({ theme }) => ({
     color: '#374957',
     borderRadius: "10px",
-    backgroundColor: '#EFF3F6',
+    backgroundColor: 'none',
     border: ' 1px solid #D2DCE1',
     '&:hover': {
         backgroundColor: '#ffffff',
-        border: ' 1px solid #EFF3F6',
+        border: ' 1px solid #ffffff',
     }, '&:focus': {
         backgroundColor: '#ffffff',
+        border: ' 1px solid #D2DCE1',
     },
 }));
 
@@ -54,11 +55,13 @@ export const ButtonWhite1 = styled(Button)(({ theme }) => ({
 export const ButtonWhite2 = styled(Button)(({ theme }) => ({
     color: '#374957',
     borderRadius: "10px",
-    backgroundColor: '#EFF3F6',
-    border: ' 1px solid #EFF3F6',
+    backgroundColor: 'none',
+    border: ' 1px solid #F7FAFB',
     textTransform: 'none',
     '&:hover': {
-        border: ' 1px solid #E5ECF0',
+        border: ' 1px solid #ffffff',
+        backgroundColor: '#ffffff',
+
     }, '&:focus': {
         backgroundColor: '#EFF3F6',
         border: ' 1px solid #E5ECF0',

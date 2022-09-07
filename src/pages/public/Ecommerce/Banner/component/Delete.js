@@ -2,7 +2,7 @@ import { Modal, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import { ButtonWhite, ColorButton } from "../../../../../Theme/Button";
+import { ButtonWhite, ButtonWhite1, ButtonWhite2, ColorButton } from "../../../../../Theme/Button";
 
 const style = {
   position: "absolute",
@@ -20,12 +20,12 @@ const Delete = ({ data }) => {
   const handleClose = () => setOpen(false);
   return (
     <div>
-      <ButtonWhite
+      <ButtonWhite2
         onClick={handleOpen}
         sx={{ height: "40px", width: "30px", fontSize: "18px", ml: 2 }}
       >
         <RiDeleteBin6Line />
-      </ButtonWhite>
+      </ButtonWhite2>
       <Modal
         open={open}
         onClose={handleClose}
@@ -48,12 +48,12 @@ const Delete = ({ data }) => {
                 </Typography>
               )}
               <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
-                <ButtonWhite
+                <ButtonWhite1
                   onClick={handleClose}
                   sx={{ width: "100px", mt: 2 }}
                 >
                   Bỏ qua
-                </ButtonWhite>
+                </ButtonWhite1>
               </Box>
             </Box>
           ) : (
@@ -63,12 +63,12 @@ const Delete = ({ data }) => {
                 tác.
               </Typography>
               <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
-                <ButtonWhite
+                <ButtonWhite1
                   onClick={handleClose}
                   sx={{ width: "100px", mt: 2 }}
                 >
                   Bỏ qua
-                </ButtonWhite>
+                </ButtonWhite1>
                 <ColorButton
                   onClick={handleClose}
                   sx={{ width: "100px", height: "40px", ml: 2, mt: 2 }}

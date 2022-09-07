@@ -26,7 +26,7 @@ const homeRoutes = [
     name: 'Banner',
     exact: true,
     component: import('./public/Ecommerce/Banner')
-  }, 
+  },
   {
     path: '/banner-item/:id',
     name: 'BannerItem',
@@ -46,6 +46,18 @@ const homeRoutes = [
     component: import('./public/Ecommerce/Banner/component/AddTypeBanner')
   },
   {
+    path: '/category',
+    name: 'Category',
+    exact: true,
+    component: import('./public/Ecommerce/Category')
+  },
+  {
+    path: '/add-category',
+    name: 'Add Category',
+    exact: true,
+    component: import('./public/Ecommerce/Category/component/AddCategory')
+  },
+  {
     path: '/profile',
     name: 'Profile',
     exact: true,
@@ -62,7 +74,7 @@ const homeRoutes = [
     name: 'NotFound',
     exact: true,
     component: import('./Layout/HomeLayout/NotFound')
-  }, 
+  },
 ];
 
 const allRoutes = {

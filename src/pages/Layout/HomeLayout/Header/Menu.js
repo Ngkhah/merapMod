@@ -154,20 +154,6 @@ const Menu = () => {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      {/* <List sx={{width:'100%', textAlign:"center"}}>
-      <img style={{width:"150px"}} src={Images.BG2} alt="" />
-
-        {["Ecommecer", "Banner", "Item Banner"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <HiQrcode style={{fontSize:"20px"}}/> : <RiHome2Line  style={{fontSize:"20px"}} />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List> */}
       <ListDrawer />
       <Divider />
     </Box>
@@ -178,13 +164,13 @@ const Menu = () => {
       <Header />
       <Box sx={style}>
         <Box sx={styleContainer}>
-          <LightTooltip
+          <LightTooltip sx={{borderRadius:'10px'}}
             title={DashboardMenu}
             color="palette.text.primary"
             placement="bottom-start"
           >
             <Link to="/">
-              <ButtonWhite2 sx={{ width: "200px", height: "40px", mr: "1rem" }}>
+              <ButtonWhite1 sx={{ width: "200px", height: "40px", mr: "1rem" }}>
                 <Typography sx={icons}>
                   <RiHome2Line />
                 </Typography>
@@ -192,7 +178,7 @@ const Menu = () => {
                 <Typography sx={icons2}>
                   <FiChevronDown />
                 </Typography>
-              </ButtonWhite2>
+              </ButtonWhite1>
             </Link>
           </LightTooltip>
 

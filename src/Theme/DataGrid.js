@@ -4,13 +4,13 @@ import { DataGrid } from "@mui/x-data-grid";
 export const customCheckbox = (theme) => {
     return {
       '& .MuiCheckbox-root svg': {
-        width: 16,
-        height: 16,
+        width: 24,
+        height: 24,
         backgroundColor: 'transparent',
   
         border: `1px solid ${theme.palette.mode === 'light' ? '#d9d9d9' : 'rgb(67, 67, 67)'
           }`,
-        borderRadius: 2,
+        borderRadius: 4,
       },
       '& .MuiCheckbox-root svg path': {
         display: 'none',
@@ -18,9 +18,9 @@ export const customCheckbox = (theme) => {
       '& .MuiCheckbox-root.Mui-checked:not(.MuiCheckbox-indeterminate) svg': {
         backgroundColor: '#00A79D',
         backgroundImage:
-          "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath" +
-          " fill-rule='evenodd' clip-rule='evenodd' d='M12 5c-.28 0-.53.11-.71.29L7 9.59l-2.29-2.3a1.003 " +
-          "1.003 0 00-1.42 1.42l3 3c.18.18.43.29.71.29s.53-.11.71-.29l5-5A1.003 1.003 0 0012 5z' fill='%23fff'/%3E%3C/svg%3E\")",
+          "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-5 -7 26 26'%3E%3Cpath" +
+          " fill-rule='evenodd' clip-rule='evenodd' d='M0 5.59552C0.0823193 5.41669 0.137408 5.21666 0.251966 5.0622C0.753081 4.38741 1.61853 4.3526 2.23233 4.972C3.36007 6.10952 4.48593 7.24958 5.61149 8.38932C5.65531 8.43363 5.68848 8.4887 " +
+          "5.73356 8.54789C5.8021 8.48269 5.84686 8.44186 5.88912 8.39913C8.51019 5.74902 11.1319 3.09923 13.7511 0.447221C14.0541 0.14021 14.4031 -0.0364009 14.8394 0.00632751C15.3333 0.054753 15.6864 0.318403 15.8851 0.769108C16.0773 1.20494 16.0232 1.63222 15.754 2.02596C15.6951 2.11205 15.6228 2.18959 15.5496 2.26397C12.6093 5.23913 9.66736 8.21271 6.72734 11.1882C6.33233 11.5879 5.87128 11.7481 5.33698 11.5547C5.14355 11.4848 4.95575 11.3534 4.80864 11.2059C3.34066 9.73479 1.88302 8.25322 0.419109 6.77799C0.21065 6.56751 0.0885794 6.31399 0 6.03768C0 5.89018 0 5.74301 0 5.59552Z' fill='%23fff'/%3E%3C/svg%3E\")",   
         borderColor: '#00A79D',
       },
       '& .MuiCheckbox-root.Mui-checked .MuiIconButton-label:after': {
