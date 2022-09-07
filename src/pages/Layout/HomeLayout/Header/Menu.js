@@ -1,6 +1,12 @@
-import { Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography } from "@mui/material";
+import {
+  Divider,
+  Drawer,
+  ListItem,
+  ListItemText,
+  Typography,
+} from "@mui/material";
 import { Box } from "@mui/system";
-import React from "react";
+import React, { Fragment, useState } from "react";
 import { AiOutlinePicCenter } from "react-icons/ai";
 import { BsFillDiagram3Fill } from "react-icons/bs";
 import { FaEllipsisH, FaUsers } from "react-icons/fa";
@@ -12,10 +18,10 @@ import { VscServerProcess } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import Header from ".";
 import { ButtonWhite1, ButtonWhite2 } from "../../../../Theme/Button";
-import { LightTooltip } from "../../../../Theme/Tooltip";
 import { ListMenu } from "../../../../Theme/ListMenu";
-import { Fragment } from "react";
-import { useState } from "react";
+import { LightTooltip } from "../../../../Theme/Tooltip";
+import ListDrawer from "./ListDrawer";
+// import Images from "../../../../constans/Img";
 
 const style = {
   position: "fixed",
@@ -38,7 +44,7 @@ const styleContainer = {
   display: "flex",
   height: "60px",
   alignItems: "center",
-  margin: "0 3rem"
+  margin: "0 3rem",
 };
 const icons = {
   pr: "10px",
@@ -127,9 +133,8 @@ const EcommerceMenu = (
 );
 
 const Menu = () => {
-
   const [state, setState] = useState({
-    left: false
+    left: false,
   });
 
   const toggleDrawer = (anchor, open) => (event) => {
@@ -144,23 +149,26 @@ const Menu = () => {
 
   const list = (anchor) => (
     <Box
-      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 250 }}
+      sx={{ width: anchor === "top" || anchor === "bottom" ? "auto" : 300 }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List sx={{width:'100%'}}>
+      {/* <List sx={{width:'100%', textAlign:"center"}}>
+      <img style={{width:"150px"}} src={Images.BG2} alt="" />
+
         {["Ecommecer", "Banner", "Item Banner"].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <HiQrcode /> : <RiHome2Line />}
+                {index % 2 === 0 ? <HiQrcode style={{fontSize:"20px"}}/> : <RiHome2Line  style={{fontSize:"20px"}} />}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItemButton>
           </ListItem>
         ))}
-      </List>
+      </List> */}
+      <ListDrawer />
       <Divider />
     </Box>
   );
@@ -170,7 +178,11 @@ const Menu = () => {
       <Header />
       <Box sx={style}>
         <Box sx={styleContainer}>
-          <LightTooltip title={DashboardMenu} color="palette.text.primary" placement="bottom-start">
+          <LightTooltip
+            title={DashboardMenu}
+            color="palette.text.primary"
+            placement="bottom-start"
+          >
             <Link to="/">
               <ButtonWhite2 sx={{ width: "200px", height: "40px", mr: "1rem" }}>
                 <Typography sx={icons}>
@@ -196,7 +208,10 @@ const Menu = () => {
           </LightTooltip>
           {["left"].map((anchor) => (
             <Fragment key={anchor}>
-              <ButtonWhite1 onClick={toggleDrawer(anchor, true)} sx={{ width: "100px", height: "40px", mr: "1rem" }}>
+              <ButtonWhite1
+                onClick={toggleDrawer(anchor, true)}
+                sx={{ width: "100px", height: "40px", mr: "1rem" }}
+              >
                 <Typography sx={icons}>
                   <FaEllipsisH />
                 </Typography>
